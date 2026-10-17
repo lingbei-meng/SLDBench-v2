@@ -1,0 +1,42 @@
+schema_version = "1.4"
+
+# The verifier runs in its own container, so the submission has to be collected
+# out of the agent's: /app carries law.py, explain.md and anything the law loads.
+artifacts = [
+    { source = "/app" },
+]
+
+[task]
+name = "scaling-law-sources/compute-optimal-tokenization-scaling"
+version = "0.1.0"
+description = "Predict C4 loss across BLT model, data, compute, and compression scales."
+authors = [{ name = "Scaling-law source conversion", email = "" }]
+keywords = ["scaling-law", "tokenization", "compression", "byte-latent-transformer"]
+
+[metadata]
+difficulty = "medium"
+difficulty_explanation = "The task extrapolates an interacting model/data/compression response surface beyond the training compute range."
+category = "scientific_discovery"
+tags = ["scaling_law", "symbolic_regression", "tokenization", "compression"]
+custom_docker_compose = false
+
+[verifier]
+timeout_sec = 600.0
+# A dedicated container. The agent has root in its own environment, so a
+# verifier sharing it could be subverted before it ever starts -- and the
+# held-out split would land in a container the agent had already prepared.
+environment_mode = "separate"
+# Root in that dedicated container, so the grader can read the collected
+# artifacts whatever mode they were copied with. The candidate law is dropped
+# to an unprivileged uid by guard.py regardless.
+user = "root"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 4096

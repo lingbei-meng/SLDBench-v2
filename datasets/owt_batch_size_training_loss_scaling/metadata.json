@@ -1,0 +1,65 @@
+{
+  "task_id": "owt_batch_size_training_loss_scaling",
+  "description": "Forecast OpenWebText training loss across compute, batch-size, and learning-rate scales.",
+  "source": {
+    "id": "shehper_owt_scaling_critical_batch_curves",
+    "urls": [
+      "https://github.com/shehper/scaling_laws",
+      "https://wandb.ai/shehper/owt-scaling",
+      "https://api.wandb.ai/graphql"
+    ]
+  },
+  "contract": {
+    "features": [
+      "training_compute_flops",
+      "global_batch_sequences",
+      "peak_learning_rate"
+    ],
+    "target": "training_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 12012,
+    "test": 3003,
+    "total": 15015,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "group",
+      "run_id",
+      "display_name",
+      "sampled_checkpoint_index",
+      "iteration",
+      "model_parameter_count",
+      "global_batch_sequences",
+      "sequence_length",
+      "global_batch_tokens",
+      "training_tokens",
+      "training_compute_flops",
+      "peak_learning_rate",
+      "training_loss",
+      "runtime_seconds"
+    ],
+    "test": [
+      "group",
+      "run_id",
+      "display_name",
+      "sampled_checkpoint_index",
+      "iteration",
+      "model_parameter_count",
+      "global_batch_sequences",
+      "sequence_length",
+      "global_batch_tokens",
+      "training_tokens",
+      "training_compute_flops",
+      "peak_learning_rate",
+      "training_loss",
+      "runtime_seconds"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported training loss; smaller values represent better performance."
+}

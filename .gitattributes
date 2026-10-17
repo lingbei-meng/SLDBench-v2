@@ -1,0 +1,11 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.parquet binary
+*.sh text eol=lf
+# Preserve checksummed task definitions and their canonical metadata verbatim.
+benchmark/task_templates/** -text
+datasets/**/metadata.json -text
+active/**/metadata.json -text
+baselines/reference_laws/** -text

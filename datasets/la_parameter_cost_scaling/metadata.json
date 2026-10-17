@@ -1,0 +1,46 @@
+{
+  "task_id": "la_parameter_cost_scaling",
+  "description": "Predict multilingual LA leaderboard capability using model parameter scale and published evaluation cost fields.",
+  "source": {
+    "id": "la",
+    "urls": [
+      "https://huggingface.co/datasets/la-leaderboard/results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "cost"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 4980,
+    "test": 1331,
+    "total": 6311,
+    "groups": 172
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "cost",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "cost",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are acc norm,none, acc,none, average len,none, bleu,none, em,none, exact match,flexible-extract, and 10 more."
+}

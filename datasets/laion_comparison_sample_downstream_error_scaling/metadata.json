@@ -1,0 +1,93 @@
+{
+  "task_id": "laion_comparison_sample_downstream_error_scaling",
+  "description": "Extrapolate the released vision-language downstream error-rate envelopes to the largest samples seen.",
+  "source": {
+    "id": "laion_scaling_laws_for_comparison",
+    "urls": [
+      "https://github.com/LAION-AI/scaling-laws-for-comparison"
+    ]
+  },
+  "contract": {
+    "features": [
+      "total_samples_seen",
+      "cost_flops"
+    ],
+    "target": "error_rate",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 28632,
+    "test": 9644,
+    "total": 38276,
+    "groups": 4119
+  },
+  "columns": {
+    "train": [
+      "model",
+      "downstream_dataset",
+      "epoch",
+      "pretrain_dataset",
+      "total_epochs",
+      "total_samples_seen",
+      "gflops_total",
+      "lr_scheduler",
+      "lr",
+      "model_simple_namespace",
+      "mparams",
+      "warmup",
+      "global_batch_size",
+      "contrastive_loss",
+      "eval_type",
+      "model_type",
+      "source_row",
+      "metric_name",
+      "released_metric",
+      "error_rate",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "model",
+      "downstream_dataset",
+      "epoch",
+      "pretrain_dataset",
+      "total_epochs",
+      "total_samples_seen",
+      "gflops_total",
+      "lr_scheduler",
+      "lr",
+      "model_simple_namespace",
+      "mparams",
+      "warmup",
+      "global_batch_size",
+      "contrastive_loss",
+      "eval_type",
+      "model_type",
+      "source_row",
+      "metric_name",
+      "released_metric",
+      "error_rate",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported error rate; smaller values represent better performance.",
+  "measurement_provenance": {
+    "source_table": "scaling_laws/data/all_results.csv.gz",
+    "method": "exact final-checkpoint rows from the official release; the exact released row with minimum error or loss is selected at duplicate independent scales, matching the paper's best-performance envelope",
+    "minimum_distinct_scales_per_curve": 4,
+    "legacy_pretraining_datasets_excluded": [
+      "CLIP-WIT",
+      "LAION-80M",
+      "LAION-400M",
+      "LAION-2B"
+    ],
+    "legacy_exclusion_reason": "avoid overlap with the earlier scaling-laws-openclip release already represented in this collection",
+    "approximate": false
+  }
+}

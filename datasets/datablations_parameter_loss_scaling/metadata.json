@@ -1,0 +1,60 @@
+{
+  "task_id": "datablations_parameter_loss_scaling",
+  "description": "Extrapolate DataBlations validation loss to larger parameter counts at fixed token budgets.",
+  "source": {
+    "id": "huggingface_datablations",
+    "urls": [
+      "https://github.com/huggingface/datablations"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 39,
+    "test": 12,
+    "total": 51,
+    "groups": 6
+  },
+  "columns": {
+    "train": [
+      "training_tokens",
+      "unique_tokens",
+      "parameter_count",
+      "validation_loss",
+      "repeat_ratio",
+      "compute_flops",
+      "source_model_count",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "training_tokens",
+      "unique_tokens",
+      "parameter_count",
+      "validation_loss",
+      "repeat_ratio",
+      "compute_flops",
+      "source_model_count",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "notebook": "plotstables/return_alloc.ipynb",
+    "cell": 1,
+    "method": "exact literal model-loss and parameter/token mappings; source loss=0 entries and notebook-excluded seed/opt/dedup variants omitted",
+    "approximate": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "task_id": "openevals_parameter_scaling",
+  "description": "Predict public benchmark performance across OpenEvals model parameter scales.",
+  "source": {
+    "id": "openevals",
+    "urls": [
+      "https://huggingface.co/datasets/OpenEvals/leaderboard-data"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 134,
+    "test": 39,
+    "total": 173,
+    "groups": 10
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are aime2026 score, gpqa score, gsm8k score, hle score, hmmt2026 score, mmluPro score, and 4 more."
+}

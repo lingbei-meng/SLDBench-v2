@@ -1,0 +1,47 @@
+{
+  "task_id": "tokenization_downstream_benchmark_scaling",
+  "description": "Predict C4 and downstream benchmark metrics across model and compression scales.",
+  "source": {
+    "id": "facebookresearch_compute_optimal_tokenization_endtasks",
+    "urls": [
+      "https://github.com/facebookresearch/compute-optimal-tokenization"
+    ]
+  },
+  "contract": {
+    "features": [
+      "model_parameter_count",
+      "compression_rate",
+      "flops_per_byte"
+    ],
+    "target": "benchmark_value",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 60,
+    "test": 25,
+    "total": 85,
+    "groups": 5
+  },
+  "columns": {
+    "train": [
+      "group",
+      "configuration_id",
+      "model_parameter_count",
+      "compression_rate",
+      "flops_per_byte",
+      "benchmark_value"
+    ],
+    "test": [
+      "group",
+      "configuration_id",
+      "model_parameter_count",
+      "compression_rate",
+      "flops_per_byte",
+      "benchmark_value"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported scalar quantity `benchmark_value` (benchmark value) predicted for each group."
+}

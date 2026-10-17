@@ -1,0 +1,49 @@
+{
+  "task_id": "routing_final_parameter_loss_scaling",
+  "description": "Extrapolate final routed-language-model losses to the largest parameter scales.",
+  "source": {
+    "id": "google_deepmind_scaling_laws_for_routing",
+    "urls": [
+      "https://github.com/google-deepmind/scaling_laws_for_routing"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "final_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 948,
+    "test": 252,
+    "total": 1200,
+    "groups": 24
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_family",
+      "target_name",
+      "cost",
+      "parameter_count",
+      "final_loss",
+      "source_configurations",
+      "split"
+    ],
+    "test": [
+      "group",
+      "model_family",
+      "target_name",
+      "cost",
+      "parameter_count",
+      "final_loss",
+      "source_configurations",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported final loss; smaller values represent better performance."
+}

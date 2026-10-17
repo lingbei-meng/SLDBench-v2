@@ -1,0 +1,62 @@
+{
+  "task_id": "gsma_qwen25_parameter_metric_scaling",
+  "description": "Qwen2.5 Telecom Metric Scaling",
+  "source": {
+    "id": "gsma_leaderboard",
+    "urls": [
+      "https://huggingface.co/datasets/GSMA/leaderboard"
+    ],
+    "title": "Qwen2.5 Telecom Metric Scaling"
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "metric_baseline_score"
+    ],
+    "target": "telecom_metric_score",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 48,
+    "test": 8,
+    "total": 56,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "baseline_origin",
+      "metric_name",
+      "model_id",
+      "parameter_count_basis",
+      "value_origin",
+      "parameter_count",
+      "metric_baseline_score",
+      "telecom_metric_score",
+      "cost_flops",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "baseline_origin",
+      "metric_name",
+      "model_id",
+      "parameter_count_basis",
+      "value_origin",
+      "parameter_count",
+      "metric_baseline_score",
+      "telecom_metric_score",
+      "cost_flops",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "`telecom_metric_score` in the source data. Context: Predict Qwen2.5 telecom benchmark metrics from parameter count and a train-only estimate of metric difficulty.",
+  "cost_note": "The source publishes no FLOPs. Explicit model parameter count is used as the model-scale and inference-cost proxy."
+}

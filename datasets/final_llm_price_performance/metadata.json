@@ -1,0 +1,46 @@
+{
+  "task_id": "final_llm_price_performance",
+  "description": "Predict FINAL-Bench LLM capability metrics from published input/output token prices.",
+  "source": {
+    "id": "final_llm",
+    "urls": [
+      "https://huggingface.co/datasets/FINAL-Bench/ALL-Bench-Leaderboard"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "cost"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 156,
+    "test": 46,
+    "total": 202,
+    "groups": 11
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "cost",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "cost",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are aime, elo, gpqa, hle, ifeval, metacog, and 5 more."
+}

@@ -1,0 +1,62 @@
+{
+  "task_id": "smollm3_3b_output_token_ttft_latency_scaling",
+  "description": "SmolLM3-3B Output-token and TTFT Latency Scaling",
+  "source": {
+    "id": "hf_lakshan2003_smollm3_3b_instruct_cost_benchmark_results",
+    "urls": [
+      "https://huggingface.co/datasets/Lakshan2003/SmolLM3-3B-Instruct-cost-benchmark-results"
+    ],
+    "title": "SmolLM3-3B Output-token and TTFT Latency Scaling"
+  },
+  "contract": {
+    "features": [
+      "output_tokens",
+      "ttft_seconds"
+    ],
+    "target": "latency_seconds",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 799,
+    "test": 200,
+    "total": 999,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "cost_origin",
+      "gpu_memory_mb",
+      "model",
+      "seconds_per_token",
+      "value_origin",
+      "output_tokens",
+      "ttft_seconds",
+      "latency_seconds",
+      "cost_flops",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "cost_origin",
+      "gpu_memory_mb",
+      "model",
+      "seconds_per_token",
+      "value_origin",
+      "output_tokens",
+      "ttft_seconds",
+      "latency_seconds",
+      "cost_flops",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "End-to-end generation latency reported by the source.",
+  "cost_note": "The source reports tokens and wall-clock latency, not measured FLOPs. The package uses 2*N*generated_tokens with N=3B as a transparent inference-compute proxy."
+}

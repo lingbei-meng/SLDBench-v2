@@ -1,0 +1,1828 @@
+[
+  {
+    "task_id": "alpaca_eval_parameter_scaling",
+    "source_id": "alpaca_eval",
+    "train_rows": 67,
+    "test_rows": 20,
+    "groups": 5,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "autoscale_predictor_domain_quantity_scaling",
+    "source_id": "feiyang_k_autoscale",
+    "train_rows": 35,
+    "test_rows": 14,
+    "groups": 7,
+    "features": [
+      "anchor_training_data_billion"
+    ],
+    "target": "predicted_domain_data_billion",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_arc_challenge_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "arc_challenge_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_arc_challenge_normalized_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "arc_challenge_normalized_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_arc_easy_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "arc_easy_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_arc_easy_normalized_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "arc_easy_normalized_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "boolq_accuracy",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_ibm_model_token_hellaswag_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "hellaswag_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_hellaswag_normalized_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "hellaswag_normalized_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_lambada_openai_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 37,
+    "test_rows": 12,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "lambada_openai_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_mathqa_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 31,
+    "test_rows": 10,
+    "groups": 5,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "mathqa_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_mathqa_normalized_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 31,
+    "test_rows": 10,
+    "groups": 5,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "mathqa_normalized_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "openbookqa_accuracy",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "openbookqa_normalized_accuracy",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_ibm_model_token_piqa_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "piqa_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_piqa_normalized_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "piqa_normalized_accuracy",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 47,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "race_high_accuracy",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_ibm_model_token_triviaqa_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 42,
+    "test_rows": 13,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "triviaqa_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_wikitext_perplexity_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 46,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "wikitext_perplexity",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 46,
+    "test_rows": 15,
+    "groups": 7,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "winogrande_accuracy",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 1366,
+    "test_rows": 342,
+    "groups": 3,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "copa_accuracy",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 1366,
+    "test_rows": 342,
+    "groups": 3,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "piqa_normalized_accuracy",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 114,
+    "test_rows": 33,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "codelinedescription_accuracy_percent",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 114,
+    "test_rows": 33,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "humanorganssenses_accuracy_percent",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 114,
+    "test_rows": 33,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "implicatures_accuracy_percent",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_opt_training_token_phraserelatedness_accuracy_percent_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 114,
+    "test_rows": 33,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "phraserelatedness_accuracy_percent",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 114,
+    "test_rows": 33,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "swahilienglishproverbs_accuracy_percent",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+    "source_id": "ibm_colpret_hitchhiker_scaling_2025",
+    "train_rows": 114,
+    "test_rows": 33,
+    "groups": 6,
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "whatisthetao_accuracy_percent",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "compute_optimal_tokenization_scaling",
+    "source_id": "facebookresearch_compute_optimal_tokenization",
+    "train_rows": 402,
+    "test_rows": 101,
+    "groups": 1,
+    "features": [
+      "compute_flops",
+      "model_parameter_count",
+      "global_parameter_count",
+      "training_data_bytes",
+      "patch_size"
+    ],
+    "target": "c4_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "datablations_parameter_loss_scaling",
+    "source_id": "huggingface_datablations",
+    "train_rows": 39,
+    "test_rows": 12,
+    "groups": 6,
+    "features": [
+      "parameter_count",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "datablations_training_token_loss_scaling",
+    "source_id": "huggingface_datablations",
+    "train_rows": 85,
+    "test_rows": 29,
+    "groups": 14,
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "datadecide_benchmark_scaling",
+    "source_id": "datadecide",
+    "train_rows": 376200,
+    "test_rows": 94050,
+    "groups": 1650,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "compute_flops",
+      "step"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "dclm_controlled_benchmark_scaling",
+    "source_id": "dclm_model_database",
+    "train_rows": 583,
+    "test_rows": 159,
+    "groups": 53,
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "target",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "delphi_controlled_scaling",
+    "source_id": "delphi",
+    "train_rows": 150,
+    "test_rows": 38,
+    "groups": 4,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "compute_flops"
+    ],
+    "target": "target",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "dpl_imdb_epoch_test_loss_scaling",
+    "source_id": "dpl_taskset_imdb_irnn64",
+    "train_rows": 30955,
+    "test_rows": 7550,
+    "groups": 755,
+    "features": [
+      "epoch"
+    ],
+    "target": "log1p_test_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "dpl_imdb_epoch_train_loss_scaling",
+    "source_id": "dpl_taskset_imdb_irnn64",
+    "train_rows": 30955,
+    "test_rows": 7550,
+    "groups": 755,
+    "features": [
+      "epoch"
+    ],
+    "target": "log1p_train_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "dpl_imdb_epoch_validation_loss_scaling",
+    "source_id": "dpl_taskset_imdb_irnn64",
+    "train_rows": 30955,
+    "test_rows": 7550,
+    "groups": 755,
+    "features": [
+      "epoch"
+    ],
+    "target": "log1p_validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "eee_nonoverlap_parameter_scaling",
+    "source_id": "eee",
+    "train_rows": 138,
+    "test_rows": 39,
+    "groups": 14,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "final_llm_price_performance",
+    "source_id": "final_llm",
+    "train_rows": 156,
+    "test_rows": 46,
+    "groups": 11,
+    "features": [
+      "parameter_count",
+      "cost"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "finetuning_example_loss_scaling",
+    "source_id": "lin_et_al_rectified_finetuning_scaling_law",
+    "train_rows": 1080,
+    "test_rows": 270,
+    "groups": 90,
+    "features": [
+      "parameter_count",
+      "finetuning_examples"
+    ],
+    "target": "evaluation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "finetuning_parameter_loss_scaling",
+    "source_id": "lin_et_al_rectified_finetuning_scaling_law",
+    "train_rows": 810,
+    "test_rows": 270,
+    "groups": 18,
+    "features": [
+      "parameter_count",
+      "finetuning_examples"
+    ],
+    "target": "evaluation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "finetuning_rmsd_parameter_scaling",
+    "source_id": "lin_et_al_rectified_finetuning_scaling_law",
+    "train_rows": 48,
+    "test_rows": 12,
+    "groups": 12,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "scaling_law_rmsd_log",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "finetuning_selection_data_budget_scaling",
+    "source_id": "lin_et_al_rectified_finetuning_scaling_law",
+    "train_rows": 108,
+    "test_rows": 18,
+    "groups": 18,
+    "features": [
+      "max_data_num"
+    ],
+    "target": "selection_metric_value",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "finetuning_selection_delta_scaling",
+    "source_id": "lin_et_al_rectified_finetuning_scaling_law",
+    "train_rows": 216,
+    "test_rows": 54,
+    "groups": 54,
+    "features": [
+      "delta"
+    ],
+    "target": "pearson_correlation",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "gaia_parameter_scaling",
+    "source_id": "gaia",
+    "train_rows": 40,
+    "test_rows": 12,
+    "groups": 4,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "gemstones_validation_curve_scaling",
+    "source_id": "mcleish7_gemstones_summary",
+    "train_rows": 6213,
+    "test_rows": 1555,
+    "groups": 3,
+    "features": [
+      "parameter_count",
+      "checkpoint_training_tokens",
+      "training_progress",
+      "max_learning_rate",
+      "width",
+      "depth"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "gsma_qwen25_parameter_metric_scaling",
+    "source_id": "gsma_leaderboard",
+    "train_rows": 48,
+    "test_rows": 8,
+    "groups": 1,
+    "features": [
+      "parameter_count",
+      "metric_baseline_score"
+    ],
+    "target": "telecom_metric_score",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "hf_imp_act_checkpoint_return_scaling",
+    "source_id": "hf_ai_for_infrastructure_management_imp_act_benchmark_results",
+    "train_rows": 8000,
+    "test_rows": 2000,
+    "groups": 100,
+    "features": [
+      "checkpoint_step"
+    ],
+    "target": "mean_return",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "hf_loubnabnl_parameter_token_compute_scaling",
+    "source_id": "hf_loubnabnl_scaling_laws_params",
+    "train_rows": 93,
+    "test_rows": 23,
+    "groups": 1,
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "log10_compute",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "hf_mteb_pt_parameter_performance_scaling",
+    "source_id": "hf_mteb_pt_mteb_pt_results",
+    "train_rows": 575,
+    "test_rows": 161,
+    "groups": 23,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "benchmark_score",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "hf_smcleish_scaling_laws_cache_loss_scaling",
+    "source_id": "hf_smcleish_scaling_laws_cache",
+    "train_rows": 20,
+    "test_rows": 6,
+    "groups": 2,
+    "features": [
+      "params",
+      "training_flops"
+    ],
+    "target": "loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "hf_weckzolo_rl_training_curve_scaling",
+    "source_id": "hf_weckzolo_rl_training_logs",
+    "train_rows": 2742,
+    "test_rows": 684,
+    "groups": 3,
+    "features": [
+      "epoch_step",
+      "ece_weight_shifted",
+      "learning_rate"
+    ],
+    "target": "metric_value",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "isoflop_loss_scaling",
+    "source_id": "isoflop",
+    "train_rows": 649,
+    "test_rows": 165,
+    "groups": 7,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "compute_flops"
+    ],
+    "target": "target",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "isotropic_compression_scaling",
+    "source_id": "facebookresearch_compute_optimal_tokenization_isotropic",
+    "train_rows": 286,
+    "test_rows": 72,
+    "groups": 1,
+    "features": [
+      "compute_flops",
+      "global_parameter_count",
+      "training_data_bytes",
+      "compression_rate",
+      "layers",
+      "dimension"
+    ],
+    "target": "c4_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "la_parameter_cost_scaling",
+    "source_id": "la",
+    "train_rows": 4980,
+    "test_rows": 1331,
+    "groups": 172,
+    "features": [
+      "parameter_count",
+      "cost"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "laion_comparison_compute_downstream_error_scaling",
+    "source_id": "laion_scaling_laws_for_comparison",
+    "train_rows": 32160,
+    "test_rows": 8417,
+    "groups": 837,
+    "features": [
+      "gflops_total",
+      "cost_flops"
+    ],
+    "target": "error_rate",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "laion_comparison_parameter_contrastive_loss_scaling",
+    "source_id": "laion_scaling_laws_for_comparison",
+    "train_rows": 127,
+    "test_rows": 55,
+    "groups": 28,
+    "features": [
+      "mparams",
+      "cost_flops"
+    ],
+    "target": "contrastive_loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "laion_comparison_parameter_downstream_error_scaling",
+    "source_id": "laion_scaling_laws_for_comparison",
+    "train_rows": 25210,
+    "test_rows": 9591,
+    "groups": 5575,
+    "features": [
+      "mparams",
+      "cost_flops"
+    ],
+    "target": "error_rate",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "laion_comparison_parameter_segmentation_error_scaling",
+    "source_id": "laion_scaling_laws_for_comparison",
+    "train_rows": 171,
+    "test_rows": 60,
+    "groups": 22,
+    "features": [
+      "model_mparams",
+      "cost_flops"
+    ],
+    "target": "segmentation_error",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+    "source_id": "laion_scaling_laws_for_comparison",
+    "train_rows": 140,
+    "test_rows": 52,
+    "groups": 21,
+    "features": [
+      "mparams",
+      "total_samples_seen",
+      "cost_flops"
+    ],
+    "target": "contrastive_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "laion_comparison_sample_downstream_error_scaling",
+    "source_id": "laion_scaling_laws_for_comparison",
+    "train_rows": 28632,
+    "test_rows": 9644,
+    "groups": 4119,
+    "features": [
+      "total_samples_seen",
+      "cost_flops"
+    ],
+    "target": "error_rate",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "laion_comparison_sample_segmentation_error_scaling",
+    "source_id": "laion_scaling_laws_for_comparison",
+    "train_rows": 173,
+    "test_rows": 58,
+    "groups": 22,
+    "features": [
+      "model_mparams",
+      "samples_seen",
+      "cost_flops"
+    ],
+    "target": "segmentation_error",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "laion_segmentation_compute_scaling",
+    "source_id": "laion_scaling_laws_comparison_segmentation_compute",
+    "train_rows": 611,
+    "test_rows": 154,
+    "groups": 2,
+    "features": [
+      "samples_seen",
+      "training_compute_flops",
+      "model_parameter_count",
+      "image_parameter_count",
+      "text_parameter_count",
+      "model_inference_flops",
+      "learning_rate",
+      "global_batch_size"
+    ],
+    "target": "segmentation_miou",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "large_scale_transfer_covidx_cxr2_shot_accuracy_scaling",
+    "source_id": "slampai_large_scale_pretraining_transfer",
+    "train_rows": 56,
+    "test_rows": 14,
+    "groups": 14,
+    "features": [
+      "transfer_shots"
+    ],
+    "target": "mean_test_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "large_scale_transfer_covidx_cxr2_shot_recall_class0_scaling",
+    "source_id": "slampai_large_scale_pretraining_transfer",
+    "train_rows": 56,
+    "test_rows": 14,
+    "groups": 14,
+    "features": [
+      "transfer_shots"
+    ],
+    "target": "mean_test_recall_class0",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "latam_parameter_scaling",
+    "source_id": "latam",
+    "train_rows": 464,
+    "test_rows": 150,
+    "groups": 50,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "lawbench_parameter_scaling",
+    "source_id": "lawbench",
+    "train_rows": 320,
+    "test_rows": 128,
+    "groups": 64,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "loss_to_loss_transfer_scaling",
+    "source_id": "llm_line",
+    "train_rows": 118480,
+    "test_rows": 29620,
+    "groups": 20,
+    "features": [
+      "source_loss",
+      "model_size",
+      "tokens",
+      "flops_proxy"
+    ],
+    "target": "target_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "mdmprimev2_isoflop_parameter_loss_scaling",
+    "source_id": "chen_hao_chao_mdm_prime_v2",
+    "train_rows": 149,
+    "test_rows": 46,
+    "groups": 21,
+    "features": [
+      "parameters",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "misfitting_checkpoint_token_loss_scaling",
+    "source_id": "hadasah_misfitting_scaling_laws",
+    "train_rows": 3637,
+    "test_rows": 999,
+    "groups": 163,
+    "features": [
+      "N",
+      "D"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "misfitting_final_compute_loss_scaling",
+    "source_id": "hadasah_misfitting_scaling_laws",
+    "train_rows": 190,
+    "test_rows": 50,
+    "groups": 5,
+    "features": [
+      "N",
+      "C_no_emb",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "misfitting_final_parameter_loss_scaling",
+    "source_id": "hadasah_misfitting_scaling_laws",
+    "train_rows": 76,
+    "test_rows": 30,
+    "groups": 17,
+    "features": [
+      "N",
+      "N_no_emb",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "mixinglaws_five_domain_joint_scale_loss_scaling",
+    "source_id": "yegcjs_mixinglaws",
+    "train_rows": 5680,
+    "test_rows": 1420,
+    "groups": 5,
+    "features": [
+      "academic_weight",
+      "prose_weight",
+      "dialogue_weight",
+      "symbolic_weight",
+      "internet_weight",
+      "parameter_count",
+      "training_tokens",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "mixinglaws_three_domain_mixture_loss_scaling",
+    "source_id": "yegcjs_mixinglaws",
+    "train_rows": 75,
+    "test_rows": 21,
+    "groups": 3,
+    "features": [
+      "github_weight",
+      "books3_weight",
+      "pile_cc_weight"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "mixinglaws_two_domain_mixture_loss_scaling",
+    "source_id": "yegcjs_mixinglaws",
+    "train_rows": 176,
+    "test_rows": 44,
+    "groups": 44,
+    "features": [
+      "parameter_count",
+      "github_weight",
+      "pile_cc_weight",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "mlfoundations_loss_to_downstream_scaling",
+    "source_id": "mlfoundations_scaling_downstream",
+    "train_rows": 3818,
+    "test_rows": 966,
+    "groups": 138,
+    "features": [
+      "source_loss",
+      "parameter_count",
+      "training_tokens",
+      "chinchilla_multiplier"
+    ],
+    "target": "top1_error",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "mteb_parameter_scaling",
+    "source_id": "mteb",
+    "train_rows": 1148714,
+    "test_rows": 288297,
+    "groups": 48714,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "multilingual_compression_scaling",
+    "source_id": "facebookresearch_compute_optimal_tokenization_multilingual",
+    "train_rows": 652,
+    "test_rows": 169,
+    "groups": 10,
+    "features": [
+      "compute_flops",
+      "model_parameter_count",
+      "global_parameter_count",
+      "training_data_bytes",
+      "patch_size"
+    ],
+    "target": "language_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "multipowerlaw_schedule_loss_scaling",
+    "source_id": "thu_yao_01_luo_multipowerlaw",
+    "train_rows": 4119,
+    "test_rows": 1032,
+    "groups": 3,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "current_learning_rate",
+      "cumulative_learning_rate",
+      "cumulative_lr_drop",
+      "recent_lr_drop_h100",
+      "recent_lr_drop_h500",
+      "recent_lr_drop_h2000",
+      "recent_lr_drop_h10000",
+      "schedule_horizon"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "obsscaling_benchmark_scaling",
+    "source_id": "obsscaling",
+    "train_rows": 14487,
+    "test_rows": 3751,
+    "groups": 258,
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "open_cn_vlm_parameter_scaling",
+    "source_id": "open_cn_vlm",
+    "train_rows": 2670,
+    "test_rows": 735,
+    "groups": 253,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "openclip_learning_curve_scaling",
+    "source_id": "openclip_learning",
+    "train_rows": 3709,
+    "test_rows": 930,
+    "groups": 8,
+    "features": [
+      "training_tokens",
+      "step"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "openclip_zeroshot_scaling",
+    "source_id": "openclip_zeroshot",
+    "train_rows": 2528,
+    "test_rows": 690,
+    "groups": 115,
+    "features": [
+      "training_tokens",
+      "compute_flops",
+      "cost"
+    ],
+    "target": "target",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "openevals_parameter_scaling",
+    "source_id": "openevals",
+    "train_rows": 134,
+    "test_rows": 39,
+    "groups": 10,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "openllm_parameter_scaling",
+    "source_id": "openllm",
+    "train_rows": 17237,
+    "test_rows": 4325,
+    "groups": 55,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "overtraining_loss_scaling",
+    "source_id": "mlfoundations_overtraining",
+    "train_rows": 664,
+    "test_rows": 168,
+    "groups": 24,
+    "features": [
+      "params_no_embed",
+      "train_tokens",
+      "chinchilla_multiplier"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "owt_batch_size_training_loss_scaling",
+    "source_id": "shehper_owt_scaling_critical_batch_curves",
+    "train_rows": 12012,
+    "test_rows": 3003,
+    "groups": 1,
+    "features": [
+      "training_compute_flops",
+      "global_batch_sequences",
+      "peak_learning_rate"
+    ],
+    "target": "training_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "owt_training_compute_loss_scaling",
+    "source_id": "shehper_owt_scaling_training_curves",
+    "train_rows": 4216,
+    "test_rows": 1055,
+    "groups": 1,
+    "features": [
+      "training_compute_flops",
+      "model_parameter_count",
+      "dataset_token_count"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "parameter_golf_training_step_loss_scaling",
+    "source_id": "openai_parameter_golf",
+    "train_rows": 713,
+    "test_rows": 188,
+    "groups": 35,
+    "features": [
+      "step"
+    ],
+    "target": "training_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "parscale_parameter_loss_scaling",
+    "source_id": "qwen_parscale",
+    "train_rows": 40,
+    "test_rows": 8,
+    "groups": 8,
+    "features": [
+      "non_embedding_parameters"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "portuguese_parameter_scaling",
+    "source_id": "portuguese",
+    "train_rows": 23113,
+    "test_rows": 5782,
+    "groups": 98,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "proteinlm_compute_loss_scaling",
+    "source_id": "cxysteven_scalingproteinlm_compute_loss",
+    "train_rows": 31923,
+    "test_rows": 7982,
+    "groups": 2,
+    "features": [
+      "compute_flops",
+      "model_parameter_count"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "proteinlm_data_repetition_curve_scaling",
+    "source_id": "cxysteven_scalingproteinlm_ur50_repetition",
+    "train_rows": 1014,
+    "test_rows": 255,
+    "groups": 2,
+    "features": [
+      "training_tokens"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "proteinlm_objective_transfer_scaling",
+    "source_id": "cxysteven_scalingproteinlm_objective_transfer",
+    "train_rows": 2655,
+    "test_rows": 665,
+    "groups": 2,
+    "features": [
+      "model_parameter_count",
+      "training_compute_flops",
+      "source_pretrain_flops",
+      "total_compute_flops",
+      "transfer_indicator"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "qwen3_rl_step_gsm8k_accuracy_scaling",
+    "source_id": "qwen3_grpo_rl_scaling_results",
+    "train_rows": 88,
+    "test_rows": 23,
+    "groups": 5,
+    "features": [
+      "parameter_count",
+      "rl_step"
+    ],
+    "target": "gsm8k_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "resolving_scaling_training_loss_curve",
+    "source_id": "formll_resolving_scaling_law_discrepancies",
+    "train_rows": 622194,
+    "test_rows": 155555,
+    "groups": 13,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "peak_learning_rate",
+      "current_learning_rate",
+      "batch_size",
+      "beta2",
+      "warmup_tokens"
+    ],
+    "target": "training_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "resolving_scaling_validation_loss_scaling",
+    "source_id": "formll_resolving_scaling_law_discrepancies",
+    "train_rows": 2087,
+    "test_rows": 527,
+    "groups": 13,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "peak_learning_rate",
+      "current_learning_rate",
+      "batch_size",
+      "beta2",
+      "warmup_tokens"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "revisiting_bigbench_learning_curve_scaling",
+    "source_id": "google_revisiting_scaling_bigbench",
+    "train_rows": 340,
+    "test_rows": 90,
+    "groups": 10,
+    "features": [
+      "seen_examples",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "revisiting_lm_learning_curve_scaling",
+    "source_id": "google_revisiting_scaling_lm",
+    "train_rows": 181,
+    "test_rows": 48,
+    "groups": 5,
+    "features": [
+      "model_parameter_count",
+      "seen_examples"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "revisiting_nmt_learning_curve_scaling",
+    "source_id": "google_revisiting_scaling_nmt",
+    "train_rows": 40,
+    "test_rows": 13,
+    "groups": 5,
+    "features": [
+      "seen_examples",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "revisiting_vision_learning_curve_scaling",
+    "source_id": "google_revisiting_scaling_vision",
+    "train_rows": 15079,
+    "test_rows": 3804,
+    "groups": 72,
+    "features": [
+      "model_parameter_count",
+      "seen_examples"
+    ],
+    "target": "loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "reward_bench_checkpoint_metric_scaling",
+    "source_id": "allenai_reward_bench_results",
+    "train_rows": 154,
+    "test_rows": 44,
+    "groups": 1,
+    "features": [
+      "training_preference_pairs",
+      "metric_baseline_accuracy"
+    ],
+    "target": "reward_bench_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "rita_parameter_scaling",
+    "source_id": "rita",
+    "train_rows": 236,
+    "test_rows": 88,
+    "groups": 44,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "routing_checkpoint_loss_scaling",
+    "source_id": "routing",
+    "train_rows": 26966,
+    "test_rows": 6757,
+    "groups": 24,
+    "features": [
+      "parameter_count",
+      "compute_flops",
+      "step",
+      "cost"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "routing_final_parameter_loss_scaling",
+    "source_id": "google_deepmind_scaling_laws_for_routing",
+    "train_rows": 948,
+    "test_rows": 252,
+    "groups": 24,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "final_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "routing_training_step_loss_scaling",
+    "source_id": "google_deepmind_scaling_laws_for_routing",
+    "train_rows": 26746,
+    "test_rows": 7985,
+    "groups": 1338,
+    "features": [
+      "parameter_count",
+      "step",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "scalebench_loss_scaling",
+    "source_id": "scalebench",
+    "train_rows": 394,
+    "test_rows": 101,
+    "groups": 4,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "compute_flops"
+    ],
+    "target": "target",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "smollm3_3b_output_token_ttft_latency_scaling",
+    "source_id": "hf_lakshan2003_smollm3_3b_instruct_cost_benchmark_results",
+    "train_rows": 799,
+    "test_rows": 200,
+    "groups": 1,
+    "features": [
+      "output_tokens",
+      "ttft_seconds"
+    ],
+    "target": "latency_seconds",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "sparse_upcycling_ablation_step_loss_scaling",
+    "source_id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "train_rows": 476,
+    "test_rows": 12,
+    "groups": 12,
+    "features": [
+      "training_step"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "sparse_upcycling_posttrain_token_loss_scaling",
+    "source_id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "train_rows": 120,
+    "test_rows": 30,
+    "groups": 30,
+    "features": [
+      "active_parameters_b",
+      "upcycling_tokens_b",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "sparse_upcycling_pretrain_token_loss_scaling",
+    "source_id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "train_rows": 120,
+    "test_rows": 30,
+    "groups": 30,
+    "features": [
+      "active_parameters_b",
+      "pretraining_tokens_b"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "sparse_upcycling_scratch_parameter_loss_scaling",
+    "source_id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "train_rows": 20,
+    "test_rows": 7,
+    "groups": 5,
+    "features": [
+      "active_parameters_b",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "sparse_upcycling_scratch_token_loss_scaling",
+    "source_id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "train_rows": 53,
+    "test_rows": 17,
+    "groups": 12,
+    "features": [
+      "active_parameters_b",
+      "training_tokens_b"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "sparse_upcycling_sparsity_posttrain_token_loss_scaling",
+    "source_id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "train_rows": 213,
+    "test_rows": 57,
+    "groups": 53,
+    "features": [
+      "total_parameters_b",
+      "upcycling_tokens_b",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "active_available": true,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "sparse_upcycling_sparsity_pretrain_token_loss_scaling",
+    "source_id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "train_rows": 180,
+    "test_rows": 45,
+    "groups": 45,
+    "features": [
+      "total_parameters_b",
+      "pretraining_tokens_b"
+    ],
+    "target": "validation_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "static_patch_compression_scaling",
+    "source_id": "facebookresearch_compute_optimal_tokenization_static",
+    "train_rows": 54,
+    "test_rows": 18,
+    "groups": 1,
+    "features": [
+      "model_parameter_count",
+      "global_parameter_count",
+      "training_data_bytes",
+      "patch_size",
+      "layers",
+      "dimension"
+    ],
+    "target": "c4_loss",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "steplaw_hyperparameter_loss_scaling",
+    "source_id": "steplaw_hyperparameter_loss",
+    "train_rows": 1528,
+    "test_rows": 383,
+    "groups": 1,
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "learning_rate",
+      "batch_size"
+    ],
+    "target": "smooth_loss",
+    "active_available": true,
+    "evaluation_subset": true
+  },
+  {
+    "task_id": "thai_parameter_scaling",
+    "source_id": "thai",
+    "train_rows": 270,
+    "test_rows": 81,
+    "groups": 27,
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "tokenization_downstream_benchmark_scaling",
+    "source_id": "facebookresearch_compute_optimal_tokenization_endtasks",
+    "train_rows": 60,
+    "test_rows": 25,
+    "groups": 5,
+    "features": [
+      "model_parameter_count",
+      "compression_rate",
+      "flops_per_byte"
+    ],
+    "target": "benchmark_value",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "transfer_fewshot_accuracy_scaling",
+    "source_id": "slampai_large_scale_pretraining_transfer",
+    "train_rows": 88,
+    "test_rows": 22,
+    "groups": 22,
+    "features": [
+      "shot_count"
+    ],
+    "target": "mean_accuracy",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "xlstm_inference_batch_decode_time_scaling",
+    "source_id": "nx_ai_xlstm_scaling_laws",
+    "train_rows": 480,
+    "test_rows": 161,
+    "groups": 78,
+    "features": [
+      "parameters",
+      "batch_size"
+    ],
+    "target": "decode_step_time",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "xlstm_inference_batch_ttft_scaling",
+    "source_id": "nx_ai_xlstm_scaling_laws",
+    "train_rows": 497,
+    "test_rows": 165,
+    "groups": 80,
+    "features": [
+      "parameters",
+      "batch_size"
+    ],
+    "target": "time_to_first_token",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "xlstm_inference_parameter_decode_time_scaling",
+    "source_id": "nx_ai_xlstm_scaling_laws",
+    "train_rows": 531,
+    "test_rows": 110,
+    "groups": 110,
+    "features": [
+      "parameters"
+    ],
+    "target": "decode_step_time",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "xlstm_inference_parameter_ttft_scaling",
+    "source_id": "nx_ai_xlstm_scaling_laws",
+    "train_rows": 559,
+    "test_rows": 116,
+    "groups": 116,
+    "features": [
+      "parameters"
+    ],
+    "target": "time_to_first_token",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "xlstm_inference_prefill_decode_time_scaling",
+    "source_id": "nx_ai_xlstm_scaling_laws",
+    "train_rows": 452,
+    "test_rows": 145,
+    "groups": 79,
+    "features": [
+      "parameters",
+      "prefill_tokens"
+    ],
+    "target": "decode_step_time",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "xlstm_inference_prefill_ttft_scaling",
+    "source_id": "nx_ai_xlstm_scaling_laws",
+    "train_rows": 455,
+    "test_rows": 146,
+    "groups": 79,
+    "features": [
+      "parameters",
+      "prefill_tokens"
+    ],
+    "target": "time_to_first_token",
+    "active_available": false,
+    "evaluation_subset": false
+  },
+  {
+    "task_id": "xlstm_parameter_compute_optimal_tokens_scaling",
+    "source_id": "nx_ai_xlstm_scaling_laws",
+    "train_rows": 80,
+    "test_rows": 8,
+    "groups": 8,
+    "features": [
+      "parameters"
+    ],
+    "target": "compute_optimal_training_tokens",
+    "active_available": false,
+    "evaluation_subset": false
+  }
+]

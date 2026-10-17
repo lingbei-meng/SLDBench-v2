@@ -1,0 +1,67 @@
+{
+  "task_id": "mixinglaws_three_domain_mixture_loss_scaling",
+  "description": "Predict held-out three-domain mixtures using the source paper's deterministic split.",
+  "source": {
+    "id": "yegcjs_mixinglaws",
+    "urls": [
+      "https://github.com/yegcjs/mixinglaws",
+      "https://arxiv.org/abs/2403.16952"
+    ]
+  },
+  "contract": {
+    "features": [
+      "github_weight",
+      "books3_weight",
+      "pile_cc_weight"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 75,
+    "test": 21,
+    "total": 96,
+    "groups": 3
+  },
+  "columns": {
+    "train": [
+      "model_size_label",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "compute_flops",
+      "github_weight",
+      "books3_weight",
+      "pile_cc_weight",
+      "mixture_id",
+      "validation_domain",
+      "validation_loss",
+      "group",
+      "split"
+    ],
+    "test": [
+      "model_size_label",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "compute_flops",
+      "github_weight",
+      "books3_weight",
+      "pile_cc_weight",
+      "mixture_id",
+      "validation_domain",
+      "validation_loss",
+      "group",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "method": "exact public experiment result table",
+    "approximate": false,
+    "figure_derived": false
+  }
+}

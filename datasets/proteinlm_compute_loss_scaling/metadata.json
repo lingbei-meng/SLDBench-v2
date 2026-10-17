@@ -1,0 +1,52 @@
+{
+  "task_id": "proteinlm_compute_loss_scaling",
+  "description": "Predict CLM/MLM protein validation loss across compute and parameter scales.",
+  "source": {
+    "id": "cxysteven_scalingproteinlm_compute_loss",
+    "urls": [
+      "https://github.com/cxysteven/ScalingProteinLM"
+    ]
+  },
+  "contract": {
+    "features": [
+      "compute_flops",
+      "model_parameter_count"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 31923,
+    "test": 7982,
+    "total": 39905,
+    "groups": 2
+  },
+  "columns": {
+    "train": [
+      "group",
+      "objective",
+      "run_id",
+      "source_file",
+      "checkpoint_index",
+      "model_parameter_count",
+      "raw_gigaflops",
+      "compute_flops",
+      "validation_loss"
+    ],
+    "test": [
+      "group",
+      "objective",
+      "run_id",
+      "source_file",
+      "checkpoint_index",
+      "model_parameter_count",
+      "raw_gigaflops",
+      "compute_flops",
+      "validation_loss"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

@@ -1,0 +1,41 @@
+{
+  "task_id": "revisiting_vision_learning_curve_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "model_parameter_count",
+      "seen_examples"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "6ND_proxy",
+      "detail": "6 x `model_parameter_count` x `seen_examples`",
+      "columns": [
+        "model_parameter_count",
+        "seen_examples"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 15079,
+    "pool_cost": 1.4212435249448377e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "model_parameter_count",
+    "seen_examples",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/revisiting_vision_learning_curve_scaling/test.parquet",
+  "target_description": "Source-reported loss; smaller values represent better performance."
+}

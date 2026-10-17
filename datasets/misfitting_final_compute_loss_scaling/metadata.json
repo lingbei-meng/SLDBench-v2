@@ -1,0 +1,85 @@
+{
+  "task_id": "misfitting_final_compute_loss_scaling",
+  "description": "Extrapolate the final-checkpoint C4 loss envelope to the largest released non-embedding training compute.",
+  "source": {
+    "id": "hadasah_misfitting_scaling_laws",
+    "urls": [
+      "https://github.com/hadasah/scaling_laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "N",
+      "C_no_emb",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 190,
+    "test": 50,
+    "total": 240,
+    "groups": 5
+  },
+  "columns": {
+    "train": [
+      "group",
+      "loss",
+      "N",
+      "N_no_emb",
+      "D",
+      "C",
+      "C_no_emb",
+      "C_6ND",
+      "C_6ND_no_emb",
+      "portion_steps_elapsed",
+      "model",
+      "train_tokens",
+      "total_steps",
+      "current_steps",
+      "total_epochs",
+      "current_epoch",
+      "peak_lr",
+      "sweep",
+      "source_row",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "group",
+      "loss",
+      "N",
+      "N_no_emb",
+      "D",
+      "C",
+      "C_no_emb",
+      "C_6ND",
+      "C_6ND_no_emb",
+      "portion_steps_elapsed",
+      "model",
+      "train_tokens",
+      "total_steps",
+      "current_steps",
+      "total_epochs",
+      "current_epoch",
+      "peak_lr",
+      "sweep",
+      "source_row",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "source_table": "data/scaling_results_last_ckpt_only.csv",
+    "method": "exact released entries; where multiple rows have an identical independent scale within a curve, retain the exact row with minimum released C4 evaluation loss",
+    "selection": "official final-checkpoint-only table, forming one empirical compute envelope per peak learning rate",
+    "minimum_distinct_scales_per_curve": 4,
+    "target_semantics": "C4 evaluation loss (the released loss column)",
+    "approximate": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "task_id": "sparse_upcycling_sparsity_posttrain_token_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "total_parameters_b",
+      "upcycling_tokens_b",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`cost_flops`",
+      "columns": [
+        "cost_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 213,
+    "pool_cost": 3.3162102577269257e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "total_parameters_b",
+    "upcycling_tokens_b",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/sparse_upcycling_sparsity_posttrain_token_loss_scaling/test.parquet",
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

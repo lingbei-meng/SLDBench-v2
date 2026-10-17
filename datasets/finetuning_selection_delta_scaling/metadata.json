@@ -1,0 +1,47 @@
+{
+  "task_id": "finetuning_selection_delta_scaling",
+  "description": "Extrapolate selection correlation to the largest calibration delta.",
+  "source": {
+    "id": "lin_et_al_rectified_finetuning_scaling_law",
+    "urls": [
+      "https://github.com/linhaowei1/Fine-tuning-Scaling-Law"
+    ]
+  },
+  "contract": {
+    "features": [
+      "delta"
+    ],
+    "target": "pearson_correlation",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 216,
+    "test": 54,
+    "total": 270,
+    "groups": 54
+  },
+  "columns": {
+    "train": [
+      "group",
+      "dataset",
+      "ratio",
+      "k",
+      "delta",
+      "pearson_correlation",
+      "split"
+    ],
+    "test": [
+      "group",
+      "dataset",
+      "ratio",
+      "k",
+      "delta",
+      "pearson_correlation",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported scalar quantity `pearson_correlation` (pearson correlation) predicted for each group."
+}

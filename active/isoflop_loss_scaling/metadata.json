@@ -1,0 +1,42 @@
+{
+  "task_id": "isoflop_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "compute_flops"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`compute_flops`",
+      "columns": [
+        "compute_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 649,
+    "pool_cost": 8.921409279300098e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "parameter_count",
+    "training_tokens",
+    "compute_flops",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/isoflop_loss_scaling/test.parquet",
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are epochai chinchilla  massivetext  chinchilla, llama 3, marin 202603  comma  llama 2, marin 202603  dclm  llama 2, marin 202603  nemotron  llama 2, misfitting  fineweb c4  transformer, and 1 more."
+}

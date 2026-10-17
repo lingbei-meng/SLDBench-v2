@@ -1,0 +1,52 @@
+{
+  "task_id": "laion_segmentation_compute_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "samples_seen",
+      "training_compute_flops",
+      "model_parameter_count",
+      "image_parameter_count",
+      "text_parameter_count",
+      "model_inference_flops",
+      "learning_rate",
+      "global_batch_size"
+    ],
+    "target": "segmentation_miou",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`training_compute_flops`",
+      "columns": [
+        "training_compute_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 611,
+    "pool_cost": 4.1906516096e+21,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "samples_seen",
+    "training_compute_flops",
+    "model_parameter_count",
+    "image_parameter_count",
+    "text_parameter_count",
+    "model_inference_flops",
+    "learning_rate",
+    "global_batch_size",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/laion_segmentation_compute_scaling/test.parquet",
+  "target_description": "Source-reported scalar quantity `segmentation_miou` (segmentation miou) predicted for each group."
+}

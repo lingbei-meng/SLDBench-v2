@@ -1,0 +1,67 @@
+{
+  "task_id": "parscale_parameter_loss_scaling",
+  "description": "Extrapolate exact ParScale validation loss to the largest released non-embedding parameter count for each corpus and P value.",
+  "source": {
+    "id": "qwen_parscale",
+    "urls": [
+      "https://github.com/QwenLM/ParScale"
+    ]
+  },
+  "contract": {
+    "features": [
+      "non_embedding_parameters"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 40,
+    "test": 8,
+    "total": 48,
+    "groups": 8
+  },
+  "columns": {
+    "train": [
+      "dataset",
+      "parallel_streams",
+      "parallel_index",
+      "model_scale_index",
+      "non_embedding_parameters",
+      "validation_loss",
+      "group",
+      "split"
+    ],
+    "test": [
+      "dataset",
+      "parallel_streams",
+      "parallel_index",
+      "model_scale_index",
+      "non_embedding_parameters",
+      "validation_loss",
+      "group",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "source_table": "literal params, p, stack_loss, and pile_loss arrays in parametric_fit.py",
+    "method": "exact AST parsing of the official parametric fitting inputs",
+    "released_points": 48,
+    "datasets": [
+      "Stack-V2 Python",
+      "Pile"
+    ],
+    "parallel_stream_values": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "model_scales": 6,
+    "parameter_semantics": "non-embedding parameter count",
+    "approximate": false
+  }
+}

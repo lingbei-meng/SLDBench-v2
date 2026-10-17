@@ -1,0 +1,52 @@
+{
+  "task_id": "revisiting_vision_learning_curve_scaling",
+  "description": "Extrapolate few-shot image-classification error across model/task learning curves.",
+  "source": {
+    "id": "google_revisiting_scaling_vision",
+    "urls": [
+      "https://github.com/google-research/google-research/tree/master/revisiting_neural_scaling_laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "model_parameter_count",
+      "seen_examples"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 15079,
+    "test": 3804,
+    "total": 18883,
+    "groups": 72
+  },
+  "columns": {
+    "train": [
+      "group",
+      "domain",
+      "task_name",
+      "model_name",
+      "model_parameter_count",
+      "seen_examples",
+      "loss",
+      "official_training_split",
+      "source_row_index"
+    ],
+    "test": [
+      "group",
+      "domain",
+      "task_name",
+      "model_name",
+      "model_parameter_count",
+      "seen_examples",
+      "loss",
+      "official_training_split",
+      "source_row_index"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported loss; smaller values represent better performance."
+}

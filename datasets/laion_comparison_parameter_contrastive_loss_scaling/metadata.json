@@ -1,0 +1,99 @@
+{
+  "task_id": "laion_comparison_parameter_contrastive_loss_scaling",
+  "description": "Extrapolate the released contrastive-loss envelopes to the largest parameter count.",
+  "source": {
+    "id": "laion_scaling_laws_for_comparison",
+    "urls": [
+      "https://github.com/LAION-AI/scaling-laws-for-comparison"
+    ]
+  },
+  "contract": {
+    "features": [
+      "mparams",
+      "cost_flops"
+    ],
+    "target": "contrastive_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 127,
+    "test": 55,
+    "total": 182,
+    "groups": 28
+  },
+  "columns": {
+    "train": [
+      "model",
+      "downstream_dataset",
+      "epoch",
+      "pretrain_dataset",
+      "total_epochs",
+      "total_samples_seen",
+      "gflops_total",
+      "lr_scheduler",
+      "lr",
+      "acc",
+      "acc1",
+      "acc5",
+      "mean_per_class_recall",
+      "image_retrieval_recall@5",
+      "text_retrieval_recall@5",
+      "model_simple_namespace",
+      "mparams",
+      "warmup",
+      "global_batch_size",
+      "contrastive_loss",
+      "eval_type",
+      "model_type",
+      "source_row",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "model",
+      "downstream_dataset",
+      "epoch",
+      "pretrain_dataset",
+      "total_epochs",
+      "total_samples_seen",
+      "gflops_total",
+      "lr_scheduler",
+      "lr",
+      "acc",
+      "acc1",
+      "acc5",
+      "mean_per_class_recall",
+      "image_retrieval_recall@5",
+      "text_retrieval_recall@5",
+      "model_simple_namespace",
+      "mparams",
+      "warmup",
+      "global_batch_size",
+      "contrastive_loss",
+      "eval_type",
+      "model_type",
+      "source_row",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported contrastive loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "source_table": "scaling_laws/data/all_results.csv.gz",
+    "method": "exact final-checkpoint rows from the official release; the exact released row with minimum error or loss is selected at duplicate independent scales, matching the paper's best-performance envelope",
+    "minimum_distinct_scales_per_curve": 4,
+    "legacy_pretraining_datasets_excluded": [
+      "CLIP-WIT",
+      "LAION-80M",
+      "LAION-400M",
+      "LAION-2B"
+    ],
+    "legacy_exclusion_reason": "avoid overlap with the earlier scaling-laws-openclip release already represented in this collection",
+    "approximate": false
+  }
+}

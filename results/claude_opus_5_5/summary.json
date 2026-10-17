@@ -1,0 +1,279 @@
+{
+  "model": "Claude Opus 5.5",
+  "harness": "Claude Code",
+  "harness_version": "2.1.280",
+  "model_identifier": "claude-opus-5-5[1m]",
+  "context_window_tokens": 1000000,
+  "reasoning_effort": "high",
+  "agent_time_limit_seconds": 3600,
+  "verifier_time_limit_seconds": 600,
+  "repeats_per_task_and_setting": 3,
+  "summary": {
+    "Passive": {
+      "runs": 90,
+      "tasks": 30,
+      "median_r2": 0.7508111242432103,
+      "best_at_3_r2": 0.81790436008449
+    },
+    "Active": {
+      "runs": 90,
+      "tasks": 30,
+      "median_r2": 0.5695803325915693,
+      "mean_cost_fraction": 0.07768737599969253,
+      "median_cost_fraction": 0.04012710196204766,
+      "median_observations_bought": 69.0,
+      "best_at_3_r2": 0.6876853004024839
+    }
+  },
+  "tasks": [
+    {
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "passive_median_r2": -0.3406114394848143,
+      "active_median_r2": -0.27726067579709524,
+      "active_median_cost_fraction": 0.13159235977962772,
+      "passive_best_at_3_r2": -0.3276988347823351,
+      "active_best_at_3_r2": -0.09671666375969235
+    },
+    {
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "passive_median_r2": 0.7302473967232681,
+      "active_median_r2": 0.20836858696835536,
+      "active_median_cost_fraction": 0.10440987306749511,
+      "passive_best_at_3_r2": 0.7302636738567596,
+      "active_best_at_3_r2": 0.4806409289127799
+    },
+    {
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "passive_median_r2": 0.7385825391113809,
+      "active_median_r2": 0.60188732286494,
+      "active_median_cost_fraction": 0.10489527461592604,
+      "passive_best_at_3_r2": 0.7385825737535121,
+      "active_best_at_3_r2": 0.6636241277260403
+    },
+    {
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "passive_median_r2": 0.198113486446288,
+      "active_median_r2": -0.1290709531313432,
+      "active_median_cost_fraction": 0.13984418610295368,
+      "passive_best_at_3_r2": 0.20129995892233388,
+      "active_best_at_3_r2": 0.02374168278291966
+    },
+    {
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "passive_median_r2": 0.7475570203972685,
+      "active_median_r2": 0.5826386863722461,
+      "active_median_cost_fraction": 0.14618897599335728,
+      "passive_best_at_3_r2": 0.7521787832210818,
+      "active_best_at_3_r2": 0.6770095655234767
+    },
+    {
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "passive_median_r2": 0.6990873568141869,
+      "active_median_r2": 0.505509065158972,
+      "active_median_cost_fraction": 0.013296210971254215,
+      "passive_best_at_3_r2": 0.7209613320856298,
+      "active_best_at_3_r2": 0.7381740420419554
+    },
+    {
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "passive_median_r2": 0.936198789488324,
+      "active_median_r2": 0.9094779330597719,
+      "active_median_cost_fraction": 0.009286474025346141,
+      "passive_best_at_3_r2": 0.9363752390543638,
+      "active_best_at_3_r2": 0.9375872211669424
+    },
+    {
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "passive_median_r2": 0.09222619599267878,
+      "active_median_r2": -0.9857556169557862,
+      "active_median_cost_fraction": 0.014388358228091543,
+      "passive_best_at_3_r2": 0.09494845767939719,
+      "active_best_at_3_r2": -0.11957988894836369
+    },
+    {
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "passive_median_r2": 0.8269092214779157,
+      "active_median_r2": 0.26976799488392766,
+      "active_median_cost_fraction": 0.029955680919717072,
+      "passive_best_at_3_r2": 0.8402225001100847,
+      "active_best_at_3_r2": 0.6983610352814911
+    },
+    {
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "passive_median_r2": 0.7489515959806443,
+      "active_median_r2": -0.1161812096659931,
+      "active_median_cost_fraction": 0.025992178985832424,
+      "passive_best_at_3_r2": 0.7494434652653388,
+      "active_best_at_3_r2": 0.5428866515155033
+    },
+    {
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "passive_median_r2": 0.566981339150443,
+      "active_median_r2": 0.4601690518017041,
+      "active_median_cost_fraction": 0.022770562215526636,
+      "passive_best_at_3_r2": 0.566981339150443,
+      "active_best_at_3_r2": 0.5400256820845233
+    },
+    {
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "passive_median_r2": 0.5159128731298149,
+      "active_median_r2": 0.0301195768477579,
+      "active_median_cost_fraction": 0.029272645682415537,
+      "passive_best_at_3_r2": 0.5436261140071332,
+      "active_best_at_3_r2": 0.36530050662583036
+    },
+    {
+      "task_id": "compute_optimal_tokenization_scaling",
+      "passive_median_r2": 0.9007515480600694,
+      "active_median_r2": 0.8268761026642389,
+      "active_median_cost_fraction": 0.05326530612244898,
+      "passive_best_at_3_r2": 0.9161476651912195,
+      "active_best_at_3_r2": 0.8453486905519891
+    },
+    {
+      "task_id": "datablations_training_token_loss_scaling",
+      "passive_median_r2": 0.8598852841079555,
+      "active_median_r2": 0.891126442245753,
+      "active_median_cost_fraction": 0.04679967326392483,
+      "passive_best_at_3_r2": 0.9582220889639145,
+      "active_best_at_3_r2": 0.9567222409645151
+    },
+    {
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "passive_median_r2": 0.7942743014533467,
+      "active_median_r2": 0.6170688727547231,
+      "active_median_cost_fraction": 0.12868265508849958,
+      "passive_best_at_3_r2": 0.7955862200588952,
+      "active_best_at_3_r2": 0.6429582543388417
+    },
+    {
+      "task_id": "gemstones_validation_curve_scaling",
+      "passive_median_r2": 0.989640788742252,
+      "active_median_r2": 0.9694762382872565,
+      "active_median_cost_fraction": 0.002920629325858721,
+      "passive_best_at_3_r2": 0.991402158940979,
+      "active_best_at_3_r2": 0.986138849753595
+    },
+    {
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "passive_median_r2": 0.6896175710779617,
+      "active_median_r2": 0.38435898789789547,
+      "active_median_cost_fraction": 0.060794560529598314,
+      "passive_best_at_3_r2": 0.6951025931260688,
+      "active_best_at_3_r2": 0.5565219788108924
+    },
+    {
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "passive_median_r2": 0.8603803642124154,
+      "active_median_r2": 0.7389436122098648,
+      "active_median_cost_fraction": 0.016669412487096052,
+      "passive_best_at_3_r2": 0.8613175151147404,
+      "active_best_at_3_r2": 0.7571857638516392
+    },
+    {
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "passive_median_r2": 0.9385379864245316,
+      "active_median_r2": 0.8679491873631819,
+      "active_median_cost_fraction": 0.003471428003395943,
+      "passive_best_at_3_r2": 0.942248292845056,
+      "active_best_at_3_r2": 0.9071074785990602
+    },
+    {
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "passive_median_r2": 0.8258725334023859,
+      "active_median_r2": 0.7212825889000296,
+      "active_median_cost_fraction": 0.3402125864827134,
+      "passive_best_at_3_r2": 0.8518653399986262,
+      "active_best_at_3_r2": 0.8250260719568201
+    },
+    {
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "passive_median_r2": 0.8764135547435343,
+      "active_median_r2": 0.7869480937252633,
+      "active_median_cost_fraction": 0.009469372214516979,
+      "passive_best_at_3_r2": 0.8900673266384257,
+      "active_best_at_3_r2": 0.8351542352568697
+    },
+    {
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "passive_median_r2": 0.6986064858647674,
+      "active_median_r2": 0.44698348648804376,
+      "active_median_cost_fraction": 0.18091430818209114,
+      "passive_best_at_3_r2": 0.8861615097531794,
+      "active_best_at_3_r2": 0.7694486662964474
+    },
+    {
+      "task_id": "loss_to_loss_transfer_scaling",
+      "passive_median_r2": 0.4855479159050369,
+      "active_median_r2": 0.23349928416773758,
+      "active_median_cost_fraction": 0.0003228678239584492,
+      "passive_best_at_3_r2": 0.5499558243202607,
+      "active_best_at_3_r2": 0.3206317598522498
+    },
+    {
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "passive_median_r2": 0.9996193419417929,
+      "active_median_r2": 0.7909500994374377,
+      "active_median_cost_fraction": 0.022484608762268408,
+      "passive_best_at_3_r2": 0.9997313410931227,
+      "active_best_at_3_r2": 0.9965247677932565
+    },
+    {
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "passive_median_r2": 0.9400805880742533,
+      "active_median_r2": 0.940870342563074,
+      "active_median_cost_fraction": 0.04969042630427575,
+      "passive_best_at_3_r2": 0.9656955086364346,
+      "active_best_at_3_r2": 0.9804568127536621
+    },
+    {
+      "task_id": "overtraining_loss_scaling",
+      "passive_median_r2": 0.8753464308387575,
+      "active_median_r2": 0.8674719822138881,
+      "active_median_cost_fraction": 0.05339111147157392,
+      "passive_best_at_3_r2": 0.936414571728137,
+      "active_best_at_3_r2": 0.9063129438266683
+    },
+    {
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "passive_median_r2": 0.14025844519775876,
+      "active_median_r2": -0.7670769570375866,
+      "active_median_cost_fraction": 0.007189076612048084,
+      "passive_best_at_3_r2": 0.30010748633391615,
+      "active_best_at_3_r2": -0.6687091877781903
+    },
+    {
+      "task_id": "proteinlm_compute_loss_scaling",
+      "passive_median_r2": 0.9428625809908086,
+      "active_median_r2": 0.9212806183191778,
+      "active_median_cost_fraction": 0.0003648671111298766,
+      "passive_best_at_3_r2": 0.9609826136747421,
+      "active_best_at_3_r2": 0.9614444012922398
+    },
+    {
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "passive_median_r2": 0.9203950556446759,
+      "active_median_r2": -2.0650533805660394,
+      "active_median_cost_fraction": 0.15742296918767507,
+      "passive_best_at_3_r2": 0.9820374506825956,
+      "active_best_at_3_r2": -0.3759589287440237
+    },
+    {
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "passive_median_r2": 0.49786560393789625,
+      "active_median_r2": 0.1701266914749363,
+      "active_median_cost_fraction": 0.024527295177157373,
+      "passive_best_at_3_r2": 0.5005981617065516,
+      "active_best_at_3_r2": 0.38822750081305946
+    }
+  ],
+  "best_at_3_metric": {
+    "name": "best@3 R2",
+    "within_task": "maximum over three repeats",
+    "across_tasks": "median over all 30 evaluation tasks",
+    "repeats_per_task_and_setting": 3,
+    "tasks": 30,
+    "definition": "For each model, task, and setting, take the maximum held-out R2 across the three repeats; then report the median of these 30 task-wise maxima. Passive and Active are computed separately.",
+    "nonfinite_encoding": "Negative infinity is encoded as the string -Infinity and retained in the maximum and median operations."
+  }
+}

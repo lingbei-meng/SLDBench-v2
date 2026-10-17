@@ -1,0 +1,61 @@
+{
+  "task_id": "xlstm_inference_batch_ttft_scaling",
+  "description": "Extrapolate official xLSTM and Llama2 time-to-first-token curves to each model/context combination's largest successful batch size.",
+  "source": {
+    "id": "nx_ai_xlstm_scaling_laws",
+    "urls": [
+      "https://github.com/NX-AI/xlstm_scaling_laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameters",
+      "batch_size"
+    ],
+    "target": "time_to_first_token",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 497,
+    "test": 165,
+    "total": 662,
+    "groups": 80
+  },
+  "columns": {
+    "train": [
+      "architecture",
+      "model",
+      "parameters",
+      "batch_size",
+      "prefill_tokens",
+      "time_to_first_token",
+      "decode_step_time",
+      "group",
+      "split"
+    ],
+    "test": [
+      "architecture",
+      "model",
+      "parameters",
+      "batch_size",
+      "prefill_tokens",
+      "time_to_first_token",
+      "decode_step_time",
+      "group",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported time to first token; it measures elapsed inference or training time.",
+  "measurement_provenance": {
+    "source_table": "data/inference_results_df_dict.pkl",
+    "method": "exact released measurements loaded from the official pickle",
+    "failure_filter": "runtime > 0; official failed measurements are -1",
+    "prefill_filter": "prefill_tokens > 0, matching the official inference fit default",
+    "minimum_curve_points": 4,
+    "runtime_units": "native units in the official release",
+    "approximate": false
+  }
+}

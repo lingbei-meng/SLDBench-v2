@@ -1,0 +1,59 @@
+{
+  "task_id": "autoscale_predictor_domain_quantity_scaling",
+  "description": "Extrapolate official AutoScale recurrence predictions for domain data quantity.",
+  "source": {
+    "id": "feiyang_k_autoscale",
+    "urls": [
+      "https://github.com/feiyang-k/AutoScale"
+    ]
+  },
+  "contract": {
+    "features": [
+      "anchor_training_data_billion"
+    ],
+    "target": "predicted_domain_data_billion",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 35,
+    "test": 14,
+    "total": 49,
+    "groups": 7
+  },
+  "columns": {
+    "train": [
+      "group",
+      "domain",
+      "prediction_round",
+      "anchor_training_data_billion",
+      "predicted_domain_data_billion",
+      "split"
+    ],
+    "test": [
+      "group",
+      "domain",
+      "prediction_round",
+      "anchor_training_data_billion",
+      "predicted_domain_data_billion",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported scalar quantity `predicted_domain_data_billion` (predicted domain data billion) predicted for each group.",
+  "measurement_provenance": {
+    "notebook": "algorithms/AutoScale_example.ipynb",
+    "cells": [
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      18
+    ],
+    "method": "exact elementwise AutoScale recurrence n_next = n_12 * (n_12 / n_03)",
+    "approximate": false
+  }
+}

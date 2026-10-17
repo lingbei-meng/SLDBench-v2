@@ -1,0 +1,43 @@
+{
+  "task_id": "lawbench_parameter_scaling",
+  "description": "Predict one-shot and zero-shot LawBench scores and abstention rates across explicit model parameter scales.",
+  "source": {
+    "id": "lawbench",
+    "urls": [
+      "https://github.com/open-compass/LawBench"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 320,
+    "test": 128,
+    "total": 448,
+    "groups": 64
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are abstention rate, score."
+}

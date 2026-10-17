@@ -1,0 +1,39 @@
+{
+  "task_id": "laion_comparison_parameter_segmentation_error_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "model_mparams",
+      "cost_flops"
+    ],
+    "target": "segmentation_error",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`cost_flops`",
+      "columns": [
+        "cost_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 171,
+    "pool_cost": 3.0179338572800003e+21,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "model_mparams",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/laion_comparison_parameter_segmentation_error_scaling/test.parquet",
+  "target_description": "Source-reported segmentation error; smaller values represent better performance."
+}

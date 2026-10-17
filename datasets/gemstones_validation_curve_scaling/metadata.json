@@ -1,0 +1,70 @@
+{
+  "task_id": "gemstones_validation_curve_scaling",
+  "description": "Predict Gemstones validation-loss curves across model, token, learning-rate, width, and depth scales.",
+  "source": {
+    "id": "mcleish7_gemstones_summary",
+    "urls": [
+      "https://github.com/mcleish7/gemstone-scaling-laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "checkpoint_training_tokens",
+      "training_progress",
+      "max_learning_rate",
+      "width",
+      "depth"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 6213,
+    "test": 1555,
+    "total": 7768,
+    "groups": 3
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "run_id",
+      "parameter_count",
+      "checkpoint_training_tokens",
+      "training_progress",
+      "max_learning_rate",
+      "width",
+      "depth",
+      "optimizer_step",
+      "final_token_budget",
+      "width_depth_ratio",
+      "num_nodes",
+      "num_gpus",
+      "seconds_per_step",
+      "validation_loss"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "run_id",
+      "parameter_count",
+      "checkpoint_training_tokens",
+      "training_progress",
+      "max_learning_rate",
+      "width",
+      "depth",
+      "optimizer_step",
+      "final_token_budget",
+      "width_depth_ratio",
+      "num_nodes",
+      "num_gpus",
+      "seconds_per_step",
+      "validation_loss"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

@@ -1,0 +1,43 @@
+{
+  "task_id": "open_cn_vlm_parameter_scaling",
+  "description": "Predict Chinese multimodal leaderboard metrics across VLM parameter scales.",
+  "source": {
+    "id": "open_cn_vlm",
+    "urls": [
+      "https://huggingface.co/datasets/open-cn-llm-leaderboard/vlm_results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 2670,
+    "test": 735,
+    "total": 3405,
+    "groups": 253
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are Art Style, Forensic Detection, Functional Correspondence, IQ Test, Jigsaw, Multi-view Reasoning, and 176 more."
+}

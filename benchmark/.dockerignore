@@ -1,0 +1,7 @@
+*
+!Dockerfile
+!requirements-task.txt
+!requirements-task-lock.txt
+!.cache/
+!.cache/claude-code.tgz
+!.cache/claude-platform.tgz

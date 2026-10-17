@@ -1,0 +1,83 @@
+{
+  "task_id": "resolving_scaling_training_loss_curve",
+  "description": "Predict held-out logged training curve across controlled model, token, optimizer, and dataset scales.",
+  "source": {
+    "id": "formll_resolving_scaling_law_discrepancies",
+    "urls": [
+      "https://github.com/formll/resolving-scaling-law-discrepancies",
+      "https://arxiv.org/abs/2406.19146"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "peak_learning_rate",
+      "current_learning_rate",
+      "batch_size",
+      "beta2",
+      "warmup_tokens"
+    ],
+    "target": "training_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 622194,
+    "test": 155555,
+    "total": 777749,
+    "groups": 13
+  },
+  "columns": {
+    "train": [
+      "run_id",
+      "dataset_name",
+      "hyperparameter_regime",
+      "warmup_regime",
+      "decay_regime",
+      "width",
+      "depth",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "peak_learning_rate",
+      "current_learning_rate",
+      "batch_size",
+      "beta2",
+      "warmup_tokens",
+      "training_loss",
+      "compute_flops",
+      "group",
+      "split"
+    ],
+    "test": [
+      "run_id",
+      "dataset_name",
+      "hyperparameter_regime",
+      "warmup_regime",
+      "decay_regime",
+      "width",
+      "depth",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "peak_learning_rate",
+      "current_learning_rate",
+      "batch_size",
+      "beta2",
+      "warmup_tokens",
+      "training_loss",
+      "compute_flops",
+      "group",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Exact public logged training curve loss.",
+  "measurement_provenance": {
+    "method": "exact public experiment result table",
+    "approximate": false,
+    "figure_derived": false
+  }
+}

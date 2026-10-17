@@ -1,0 +1,50 @@
+{
+  "task_id": "finetuning_parameter_loss_scaling",
+  "description": "Extrapolate fine-tuning evaluation loss to the largest reported model within each architecture family and data scale.",
+  "source": {
+    "id": "lin_et_al_rectified_finetuning_scaling_law",
+    "urls": [
+      "https://github.com/linhaowei1/Fine-tuning-Scaling-Law"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "finetuning_examples"
+    ],
+    "target": "evaluation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 810,
+    "test": 270,
+    "total": 1080,
+    "groups": 18
+  },
+  "columns": {
+    "train": [
+      "group",
+      "dataset",
+      "model_name",
+      "family",
+      "parameter_count",
+      "finetuning_examples",
+      "evaluation_loss",
+      "split"
+    ],
+    "test": [
+      "group",
+      "dataset",
+      "model_name",
+      "family",
+      "parameter_count",
+      "finetuning_examples",
+      "evaluation_loss",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported evaluation loss; smaller values represent better performance."
+}

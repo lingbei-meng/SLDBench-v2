@@ -1,0 +1,47 @@
+{
+  "task_id": "finetuning_selection_data_budget_scaling",
+  "description": "Extrapolate model-selection quality to the largest tuning-data budget.",
+  "source": {
+    "id": "lin_et_al_rectified_finetuning_scaling_law",
+    "urls": [
+      "https://github.com/linhaowei1/Fine-tuning-Scaling-Law"
+    ]
+  },
+  "contract": {
+    "features": [
+      "max_data_num"
+    ],
+    "target": "selection_metric_value",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 108,
+    "test": 18,
+    "total": 126,
+    "groups": 18
+  },
+  "columns": {
+    "train": [
+      "group",
+      "dataset",
+      "metric",
+      "method",
+      "max_data_num",
+      "selection_metric_value",
+      "split"
+    ],
+    "test": [
+      "group",
+      "dataset",
+      "metric",
+      "method",
+      "max_data_num",
+      "selection_metric_value",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported scalar quantity `selection_metric_value` (selection metric value) predicted for each group."
+}

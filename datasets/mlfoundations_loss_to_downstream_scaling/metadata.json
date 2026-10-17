@@ -1,0 +1,57 @@
+{
+  "task_id": "mlfoundations_loss_to_downstream_scaling",
+  "description": "Predict downstream top-1 error from released validation loss, model size, token budget, and over-training scale.",
+  "source": {
+    "id": "mlfoundations_scaling_downstream",
+    "urls": [
+      "https://github.com/mlfoundations/scaling"
+    ]
+  },
+  "contract": {
+    "features": [
+      "source_loss",
+      "parameter_count",
+      "training_tokens",
+      "chinchilla_multiplier"
+    ],
+    "target": "top1_error",
+    "group": "group",
+    "source_loss": "arithmetic mean of all released next-token validation losses for a model",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 3818,
+    "test": 966,
+    "total": 4784,
+    "groups": 138
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "downstream_task",
+      "source_loss",
+      "parameter_count",
+      "training_tokens",
+      "chinchilla_multiplier",
+      "train_dataset",
+      "model_family",
+      "top1_error"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "downstream_task",
+      "source_loss",
+      "parameter_count",
+      "training_tokens",
+      "chinchilla_multiplier",
+      "train_dataset",
+      "model_family",
+      "top1_error"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported top1 error; smaller values represent better performance."
+}

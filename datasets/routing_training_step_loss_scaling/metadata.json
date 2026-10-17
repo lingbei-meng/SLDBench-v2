@@ -1,0 +1,57 @@
+{
+  "task_id": "routing_training_step_loss_scaling",
+  "description": "Extrapolate six official routed-language-model losses to the final training checkpoints.",
+  "source": {
+    "id": "google_deepmind_scaling_laws_for_routing",
+    "urls": [
+      "https://github.com/google-deepmind/scaling_laws_for_routing"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "step",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 26746,
+    "test": 7985,
+    "total": 34731,
+    "groups": 1338
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "model_family",
+      "target_name",
+      "parameter_count",
+      "compute_flops",
+      "cost",
+      "step",
+      "loss",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "model_family",
+      "target_name",
+      "parameter_count",
+      "compute_flops",
+      "cost",
+      "step",
+      "loss",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported loss; smaller values represent better performance."
+}

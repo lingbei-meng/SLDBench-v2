@@ -1,0 +1,61 @@
+{
+  "task_id": "proteinlm_objective_transfer_scaling",
+  "description": "Predict CLM/MLM protein loss under scratch and cross-objective transfer training.",
+  "source": {
+    "id": "cxysteven_scalingproteinlm_objective_transfer",
+    "urls": [
+      "https://github.com/cxysteven/ScalingProteinLM"
+    ]
+  },
+  "contract": {
+    "features": [
+      "model_parameter_count",
+      "training_compute_flops",
+      "source_pretrain_flops",
+      "total_compute_flops",
+      "transfer_indicator"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 2655,
+    "test": 665,
+    "total": 3320,
+    "groups": 2
+  },
+  "columns": {
+    "train": [
+      "group",
+      "objective",
+      "training_mode",
+      "run_id",
+      "source_file",
+      "checkpoint_index",
+      "model_parameter_count",
+      "training_compute_flops",
+      "source_pretrain_flops",
+      "total_compute_flops",
+      "transfer_indicator",
+      "validation_loss"
+    ],
+    "test": [
+      "group",
+      "objective",
+      "training_mode",
+      "run_id",
+      "source_file",
+      "checkpoint_index",
+      "model_parameter_count",
+      "training_compute_flops",
+      "source_pretrain_flops",
+      "total_compute_flops",
+      "transfer_indicator",
+      "validation_loss"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

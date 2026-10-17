@@ -1,0 +1,71 @@
+{
+  "task_id": "owt_training_compute_loss_scaling",
+  "description": "Forecast validation-loss curves across OpenWebText compute, parameter, and data scales.",
+  "source": {
+    "id": "shehper_owt_scaling_training_curves",
+    "urls": [
+      "https://github.com/shehper/scaling_laws",
+      "https://wandb.ai/shehper/owt-scaling",
+      "https://api.wandb.ai/graphql"
+    ]
+  },
+  "contract": {
+    "features": [
+      "training_compute_flops",
+      "model_parameter_count",
+      "dataset_token_count"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 4216,
+    "test": 1055,
+    "total": 5271,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "group",
+      "run_id",
+      "display_name",
+      "experiment_regime",
+      "checkpoint_index",
+      "iteration",
+      "model_parameter_count",
+      "dataset_token_count",
+      "dataset_fraction",
+      "batch_tokens",
+      "training_tokens",
+      "training_compute_flops",
+      "peak_learning_rate",
+      "checkpoint_learning_rate",
+      "validation_loss",
+      "training_loss",
+      "runtime_seconds"
+    ],
+    "test": [
+      "group",
+      "run_id",
+      "display_name",
+      "experiment_regime",
+      "checkpoint_index",
+      "iteration",
+      "model_parameter_count",
+      "dataset_token_count",
+      "dataset_fraction",
+      "batch_tokens",
+      "training_tokens",
+      "training_compute_flops",
+      "peak_learning_rate",
+      "checkpoint_learning_rate",
+      "validation_loss",
+      "training_loss",
+      "runtime_seconds"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

@@ -1,0 +1,56 @@
+{
+  "task_id": "mdmprimev2_isoflop_parameter_loss_scaling",
+  "description": "Extrapolate official ARM, MDM, and MDM-Prime-v2 IsoFLOP loss curves to each curve's largest reported parameter scale.",
+  "source": {
+    "id": "chen_hao_chao_mdm_prime_v2",
+    "urls": [
+      "https://github.com/chen-hao-chao/mdm-prime-v2"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameters",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 149,
+    "test": 46,
+    "total": 195,
+    "groups": 21
+  },
+  "columns": {
+    "train": [
+      "group",
+      "architecture",
+      "compute_flops",
+      "parameters",
+      "training_tokens",
+      "validation_loss",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "group",
+      "architecture",
+      "compute_flops",
+      "parameters",
+      "training_tokens",
+      "validation_loss",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "source_table": "plot/plot_isoflop_curves.py:isoflop_configs",
+    "method": "exact numeric entries from the official plotting release",
+    "repository_note": "the pinned repository links a corrected May 2026 paper and notes a bug in its former NLL evaluation",
+    "approximate": false
+  }
+}

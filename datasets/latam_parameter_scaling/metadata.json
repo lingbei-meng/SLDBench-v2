@@ -1,0 +1,43 @@
+{
+  "task_id": "latam_parameter_scaling",
+  "description": "Predict Latin American Spanish and Portuguese leaderboard metrics across model parameter scales.",
+  "source": {
+    "id": "latam",
+    "urls": [
+      "https://huggingface.co/datasets/LatamBoard/leaderboard-results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 464,
+    "test": 150,
+    "total": 614,
+    "groups": 50
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are overall latam score, portuguese assin2 rte, portuguese bluex, portuguese enem challenge, portuguese faquad nli, portuguese oab exams, and 44 more."
+}

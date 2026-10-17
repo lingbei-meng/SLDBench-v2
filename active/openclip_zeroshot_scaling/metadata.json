@@ -1,0 +1,42 @@
+{
+  "task_id": "openclip_zeroshot_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "training_tokens",
+      "compute_flops",
+      "cost"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`compute_flops`",
+      "columns": [
+        "compute_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 2528,
+    "pool_cost": 1.549170627431585e+24,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "training_tokens",
+    "compute_flops",
+    "cost",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/openclip_zeroshot_scaling/test.parquet",
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are acc1, acc5, image retrieval recall@5, mean average precision, mean per class recall, text retrieval recall@5."
+}

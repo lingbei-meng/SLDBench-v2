@@ -1,0 +1,10 @@
+#!/bin/sh
+# The only command the agent may run as root.
+#
+# Pinning the interpreter flags on the root side of the sudo boundary is the
+# point of this wrapper: `-I` (isolated) drops PYTHON* environment variables,
+# the caller's ~/.local site-packages and the script's own directory from
+# sys.path, so nothing the agent can write is importable by the root oracle.
+# Without it, a `usercustomize.py` or a shadowing `pandas.py` under the agent's
+# home would execute as root the moment the oracle started.
+exec /usr/local/bin/python3 -I -B /opt/oracle/observe.py "$@"

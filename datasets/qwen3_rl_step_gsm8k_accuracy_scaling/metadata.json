@@ -1,0 +1,46 @@
+{
+  "task_id": "qwen3_rl_step_gsm8k_accuracy_scaling",
+  "description": "Extrapolate Qwen3 GSM8K accuracy over later GRPO steps.",
+  "source": {
+    "id": "qwen3_grpo_rl_scaling_results",
+    "urls": [
+      "https://github.com/josancamon19/rl-scaling-laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "rl_step"
+    ],
+    "target": "gsm8k_accuracy",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 88,
+    "test": 23,
+    "total": 111,
+    "groups": 5
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_label",
+      "parameter_count",
+      "rl_step",
+      "gsm8k_accuracy",
+      "split"
+    ],
+    "test": [
+      "group",
+      "model_label",
+      "parameter_count",
+      "rl_step",
+      "gsm8k_accuracy",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported gsm8k accuracy; larger values represent better performance."
+}

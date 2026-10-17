@@ -1,0 +1,38 @@
+{
+  "task_id": "hf_mteb_pt_parameter_performance_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "benchmark_score",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`cost_flops`",
+      "columns": [
+        "cost_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 575,
+    "pool_cost": 245318000000.0,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "parameter_count",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/hf_mteb_pt_parameter_performance_scaling/test.parquet",
+  "target_description": "Portuguese MTEB task or aggregate score."
+}

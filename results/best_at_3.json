@@ -1,0 +1,4387 @@
+{
+  "metric": {
+    "name": "best@3 R2",
+    "within_task": "maximum over three repeats",
+    "across_tasks": "median over all 30 evaluation tasks",
+    "repeats_per_task_and_setting": 3,
+    "tasks": 30,
+    "definition": "For each model, task, and setting, take the maximum held-out R2 across the three repeats; then report the median of these 30 task-wise maxima. Passive and Active are computed separately.",
+    "nonfinite_encoding": "Negative infinity is encoded as the string -Infinity and retained in the maximum and median operations."
+  },
+  "systems": [
+    {
+      "model": "Claude Opus 5.5",
+      "harness": "Claude Code",
+      "passive_best_at_3_r2": 0.81790436008449,
+      "active_best_at_3_r2": 0.6876853004024839
+    },
+    {
+      "model": "Kimi K3",
+      "harness": "Claude Code",
+      "passive_best_at_3_r2": 0.7683868145656743,
+      "active_best_at_3_r2": 0.6918597059742027
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "harness": "Claude Code",
+      "passive_best_at_3_r2": 0.7544947660761101,
+      "active_best_at_3_r2": 0.7582656862694673
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "harness": "Codex",
+      "passive_best_at_3_r2": 0.7743530245132177,
+      "active_best_at_3_r2": 0.7437781915600541
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "harness": "Claude Code",
+      "passive_best_at_3_r2": 0.7978070156510861,
+      "active_best_at_3_r2": 0.6673360815352162
+    },
+    {
+      "model": "Hy4-Preview",
+      "harness": "Claude Code",
+      "passive_best_at_3_r2": 0.7969780561550786,
+      "active_best_at_3_r2": 0.565935174467278
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "harness": "Gemini CLI",
+      "passive_best_at_3_r2": 0.7894594010184846,
+      "active_best_at_3_r2": 0.5610950355117479
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "harness": "Claude Code",
+      "passive_best_at_3_r2": 0.7493533192494662,
+      "active_best_at_3_r2": 0.575826786634708
+    }
+  ],
+  "per_task": [
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.3276988347823351,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7302636738567596,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7385825737535121,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.20129995892233388,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7521787832210818,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.7209613320856298,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9363752390543638,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.09494845767939719,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8402225001100847,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7494434652653388,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.566981339150443,
+      "best_repeats": [
+        1,
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5436261140071332,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.9161476651912195,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.9582220889639145,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.7955862200588952,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.991402158940979,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.6951025931260688,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.8613175151147404,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.942248292845056,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8518653399986262,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8900673266384257,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.8861615097531794,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.5499558243202607,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9997313410931227,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9656955086364346,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.936414571728137,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": 0.30010748633391615,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9609826136747421,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.9820374506825956,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.5005981617065516,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.09671666375969235,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.4806409289127799,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.6636241277260403,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.02374168278291966,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.6770095655234767,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.7381740420419554,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9375872211669424,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": -0.11957988894836369,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.6983610352814911,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5428866515155033,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5400256820845233,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.36530050662583036,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.8453486905519891,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.9567222409645151,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.6429582543388417,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.986138849753595,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.5565219788108924,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.7571857638516392,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.9071074785990602,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8250260719568201,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8351542352568697,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.7694486662964474,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.3206317598522498,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9965247677932565,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9804568127536621,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.9063129438266683,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.6687091877781903,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9614444012922398,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": -0.3759589287440237,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.38822750081305946,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.48570991319691115,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7425840225545566,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7659133934102351,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": -0.016815200280421383,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7708602357211135,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.7255261164262279,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9365972961829768,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.38626108316948926,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8397925221464506,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.765410462468911,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5409819837874265,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5436371971674526,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.8675152095514775,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.984471605941269,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.8088376145266876,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.976374130787871,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.6040735393445484,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.822319931109533,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.9078425851966674,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8656813658807513,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.7858387584556539,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": -0.08437657783131813,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.5119828622384512,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.996125468493085,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9890557610325881,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.9252404019742861,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.2799147250554721,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9621387848561528,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.13801656349773217,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.5152225806602758,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.5509454541670176,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.6959242395124202,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7233394881957589,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.2600531973865913,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.6785371614750941,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.726408337614348,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9509294752582685,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.3416193674786734,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.9125848117154314,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7860021462624264,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5611737965827713,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.6384636523426712,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.6214929980351149,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": "-Infinity",
+      "best_repeats": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.7298899307433949,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.9080925397660584,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.687795172435985,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.729493219958792,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.8054518902472079,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": -0.5370191757314069,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8024313245478706,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.21600344706143748,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.022599191285087583,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9936242130460536,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.8666845232582971,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.841652908053318,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.4310779181884097,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9008564884101067,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.3163549961990235,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.042212202473169036,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.5509446690377464,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7664395100559935,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7385825737535153,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": -0.03905072408500221,
+      "best_repeats": [
+        1,
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7600156664449781,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.6845678536361957,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9416956406678081,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.12030067973582637,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8485148155747606,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7489738657072421,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.600388956643094,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5436261140598053,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.8907649689278057,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.41884055226728045,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.8145187218296924,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.9650195657651436,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.4456211816867848,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.7902254532943088,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.9091670473734927,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8467191493456859,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8606283281416243,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.20714398222610164,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.5149045216782226,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9695114236450932,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9774202259637019,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.8404400928620442,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": 0.14806043050656614,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.8879361268128269,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.1380283104465958,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.49805178133549166,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.5509454541670336,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7228406805193374,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7647618112986716,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": -0.02514348482611317,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7682258190563325,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.5750725708327933,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9559055143702193,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.2079932179283447,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8552875899236236,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7526320201554108,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5296247008377559,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.6070473404419854,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.8606974615067605,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.9708843242069105,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.7107143611902736,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.9048829615616197,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.6424696022776739,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.7831630398107063,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.6752617475621672,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.849352803296059,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.7812559492948237,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.7325234287052813,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.21492925067765367,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9744558910980554,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9134130410735897,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.7638993523835239,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.3457672203800759,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9277712238727474,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.977662496391805,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Pro",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.37835911004243994,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.5332418598385282,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7528268730380858,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7995954398366913,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.08107946349764938,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7405131550283386,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.7255344554411796,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9162482276858007,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.37081583241118987,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8292153519906299,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7630230011798272,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5395857868747804,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5557173130377469,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.9096724834572048,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.853100183398039,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.7856830478466081,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.9770564401688617,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.5241940863693624,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.8352007274208977,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.9274302474069889,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8876089328753042,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8560031439628955,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": -0.08437673580748895,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.5614612779212891,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9843745759248627,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9765124159777103,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.8215513131421344,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": 0.19765675633160062,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9428745674531654,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.5183302000034187,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.4465515890173801,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.5509454381375816,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7530546129153906,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7995954391933542,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.02586805328786268,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7783518426532531,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.7345017702047177,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9494218971103706,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.22420472324277863,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8135220008035215,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8163434271713201,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5727965698933184,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.6068008705114254,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.6686861252848963,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.9621295696604111,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.7603945128700452,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.971133470814898,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.5273293251444653,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.8113389170106191,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.9032779972217064,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8697098432477581,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.6397948590592408,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": -0.2687474481028924,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.3847081858110366,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9962998059527004,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9260179821541443,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.6564710930897479,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.08289804056697792,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.919042521101049,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.16095981473869936,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.4702218941525659,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.20950940328898748,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7282097705071668,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.8019692220089102,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.2362292723162811,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7530150339224935,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.6922440662264531,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9365991167155588,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.10535657186586389,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8292152119824298,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.793644809293262,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5208928415730507,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.6609880058062162,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.8881467179325095,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.970200191019497,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.825177628556716,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.9908705815240315,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.62711976231504,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.8647424770588852,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.9359188735928844,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.9036032727961814,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8639463222291559,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.5502033974573158,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.48092693302409295,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9960622057298311,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9837430026254044,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.8541517365469846,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.06052960240346006,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.8895701056790416,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.5183575677409822,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.5636636324699835,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.12000658114581686,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.758434232715804,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7415635294029467,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.16018519465097303,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7535337414740896,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.6008799799563067,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9560335598754953,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.04682247136173534,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.714065270330556,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.606782018222854,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.6298718767707177,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.43462099692295375,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.7880255513508385,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.3401385491013895,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.7835972567501339,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.8585703118054837,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.5954975218819842,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.7048002862997147,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.8398668497799422,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8243103641211763,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.7460449751394835,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.42338588109153585,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.1815727519532977,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.2034077611766456,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.819249330460586,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.8105131495680995,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": 0.046580839410444996,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9203017080452429,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": -0.9069050604598969,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.0004971025826848718,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.14668309758825093,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.746196977145611,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7747675429549533,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.22252678949440075,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7458031764637079,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.7068154718113824,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9418216523329088,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.07281859464597973,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.847794648951606,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7382331099082711,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5781214028719552,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.6055854364898594,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.8987545518600298,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.9893901139972355,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.8191885693552039,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.9917370332700712,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.6512020046223848,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.8669031493682099,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.9279820931200775,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8976554551023013,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8614437647152212,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.8939787783123693,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.413060039175573,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9980088535269384,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9671104334020928,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.914509391766612,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": 0.2769767887853233,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9428745156850218,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.610005532085057,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.5350323871740525,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.031361697412130685,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7266301063847458,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.5756760592000518,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.34908453688805574,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.77460731030312,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.5419456764136192,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9372019386758351,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.37130150150221086,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7534639776958088,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": -0.36721722019370007,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.2013554833815513,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.3622308683650962,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.7176646052931855,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.5302352288412004,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.6751500452781197,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.8444890580146538,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.6663748010251465,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.7399322442115877,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.8440209903137341,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.7913205846232447,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.6778544424050952,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": -0.07914975644814692,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": -0.3506383613527586,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.7049099896430608,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.6879790949603175,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": -0.5572804536149945,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -2.392223603268956,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.5561942897345041,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": -0.9287235551950921,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Hy4-Preview",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.47111700143994284,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.597051346864309,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7664175329889393,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7685911416505106,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": -0.03905489462554246,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7607344602912566,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.706665931406442,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9365980321883716,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.31382533115095823,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8573894329871451,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7489583058667345,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5036649187171466,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.7312276410223627,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.860969714663188,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.8531002168569202,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.8103276603864585,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.977672938863927,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.5415696862635201,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.869278439595152,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.932446987633659,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8357815951519947,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.8667724842602036,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.7539112593429559,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.4793901520915672,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9933331458684465,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9642299478818274,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.8290318065914877,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": 0.07102133422934864,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.9428745219764337,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.9203997528755922,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.49638845527515885,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.5728837528756101,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.8165767548413657,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9158788179425356,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.2560021630023047,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7678656119237477,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.5082867479110709,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9533778904408665,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.20067761321694966,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8573900589811742,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.862049804569692,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.526871703779276,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5436257611849151,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.7688731897063851,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.5792710634295732,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.645231929751221,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.5785643098385808,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.4654055688416966,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.04275678495289437,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.8765179818053195,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.9022045890486148,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.23639427852720474,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.5913464933746577,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.12863728815076825,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.17919058962683798,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.8549610354378628,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.592791824540037,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.06981534160617886,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": -1.7431661774862737,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": -2.3033380600334143,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.17662231526861594,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.536498369268716,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.7468314127528638,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7518752257460687,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.1695160816527017,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7358596882655708,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.7173401930530117,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9353197572318696,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.10535511233565342,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8459871577749349,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.753941310660289,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5181576867163649,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.5539915083834757,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.7282342692933421,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.8531003027975197,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.7964325500929423,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": 0.9011435112430226,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.5415705382026808,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.8122649951584411,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.8715148169904845,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.8538869454950391,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": 0.815606414942597,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": 0.36781462879035876,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": 0.5397735920526388,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9689164905070797,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9615815259467837,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.8387981260036829,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -2.227372942611903,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.8879397723364372,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.13802967217071715,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Passive",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.44505733105341005,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_boolq_accuracy_scaling",
+      "best_at_3_r2": -0.14018798926925502,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_accuracy_scaling",
+      "best_at_3_r2": 0.771578773048361,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.7385825737535121,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_race_high_accuracy_scaling",
+      "best_at_3_r2": 0.1238692797099824,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_ibm_model_token_winogrande_accuracy_scaling",
+      "best_at_3_r2": 0.7600207339989052,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+      "best_at_3_r2": 0.6675312466219936,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+      "best_at_3_r2": 0.9518470972394116,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+      "best_at_3_r2": 0.42322368235259245,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8184448245424727,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_implicatures_accuracy_percent_scaling",
+      "best_at_3_r2": 0.8086904267973054,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling",
+      "best_at_3_r2": 0.593287205967961,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling",
+      "best_at_3_r2": 0.558366367301455,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "compute_optimal_tokenization_scaling",
+      "best_at_3_r2": 0.7381725853267402,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "datablations_training_token_loss_scaling",
+      "best_at_3_r2": 0.8648821832559478,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "dclm_controlled_benchmark_scaling",
+      "best_at_3_r2": 0.6840371218097037,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "gemstones_validation_curve_scaling",
+      "best_at_3_r2": -3.8563935380683656,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "hf_mteb_pt_parameter_performance_scaling",
+      "best_at_3_r2": 0.6906822049856385,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_compute_downstream_error_scaling",
+      "best_at_3_r2": 0.15080170251768454,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_parameter_downstream_error_scaling",
+      "best_at_3_r2": 0.2222416031582768,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+      "best_at_3_r2": 0.2357348521826539,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_downstream_error_scaling",
+      "best_at_3_r2": -0.07279687749072905,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "laion_comparison_sample_segmentation_error_scaling",
+      "best_at_3_r2": -0.536853049804014,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "loss_to_loss_transfer_scaling",
+      "best_at_3_r2": -0.9240957035718664,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "misfitting_checkpoint_token_loss_scaling",
+      "best_at_3_r2": 0.9594203557209957,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "misfitting_final_compute_loss_scaling",
+      "best_at_3_r2": 0.9515439244232675,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "overtraining_loss_scaling",
+      "best_at_3_r2": 0.12017487888549383,
+      "best_repeats": [
+        2
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "owt_batch_size_training_loss_scaling",
+      "best_at_3_r2": -0.2696996067861708,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "proteinlm_compute_loss_scaling",
+      "best_at_3_r2": 0.7249051454587955,
+      "best_repeats": [
+        3
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "revisiting_nmt_learning_curve_scaling",
+      "best_at_3_r2": 0.1380287799370039,
+      "best_repeats": [
+        1
+      ]
+    },
+    {
+      "model": "DeepSeek V4 Flash",
+      "setting": "Active",
+      "task_id": "steplaw_hyperparameter_loss_scaling",
+      "best_at_3_r2": 0.23521742682402713,
+      "best_repeats": [
+        2
+      ]
+    }
+  ]
+}

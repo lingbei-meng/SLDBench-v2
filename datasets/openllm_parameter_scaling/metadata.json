@@ -1,0 +1,43 @@
+{
+  "task_id": "openllm_parameter_scaling",
+  "description": "Predict Open LLM Leaderboard metrics across explicitly published model parameter scales.",
+  "source": {
+    "id": "openllm",
+    "urls": [
+      "https://huggingface.co/datasets/open-llm-leaderboard/results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 17237,
+    "test": 4325,
+    "total": 21562,
+    "groups": 55
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are acc norm,none, acc,none, exact match,none, inst level loose acc,none, inst level strict acc,none, prompt level loose acc,none, and 1 more."
+}

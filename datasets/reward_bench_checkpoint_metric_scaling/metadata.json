@@ -1,0 +1,63 @@
+{
+  "task_id": "reward_bench_checkpoint_metric_scaling",
+  "description": "RewardBench Checkpoint and Metric Scaling",
+  "source": {
+    "id": "allenai_reward_bench_results",
+    "urls": [
+      "https://arxiv.org/abs/2403.13787",
+      "https://huggingface.co/datasets/allenai/reward-bench-results"
+    ],
+    "title": "RewardBench Checkpoint and Metric Scaling"
+  },
+  "contract": {
+    "features": [
+      "training_preference_pairs",
+      "metric_baseline_accuracy"
+    ],
+    "target": "reward_bench_accuracy",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 154,
+    "test": 44,
+    "total": 198,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "baseline_origin",
+      "metric_name",
+      "model_family",
+      "parameter_count",
+      "value_origin",
+      "training_preference_pairs",
+      "metric_baseline_accuracy",
+      "reward_bench_accuracy",
+      "cost_flops",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "baseline_origin",
+      "metric_name",
+      "model_family",
+      "parameter_count",
+      "value_origin",
+      "training_preference_pairs",
+      "metric_baseline_accuracy",
+      "reward_bench_accuracy",
+      "cost_flops",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "`reward_bench_accuracy` in the source data. Context: Predict RewardBench metric accuracy as a function of the number of preference pairs seen by a fixed 7B reward model and a train-only estimate of metric difficulty.",
+  "cost_note": "Training FLOPs are approximated as 6*N*D with N=7B parameters and D equal to the source checkpoint's preference-pair count."
+}

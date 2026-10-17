@@ -1,0 +1,43 @@
+{
+  "task_id": "portuguese_parameter_scaling",
+  "description": "Predict Portuguese leaderboard performance across model parameter scales.",
+  "source": {
+    "id": "portuguese",
+    "urls": [
+      "https://huggingface.co/datasets/eduagarcia-temp/llm_pt_leaderboard_results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 23113,
+    "test": 5782,
+    "total": 28895,
+    "groups": 98
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are acc,all, acc,exam id  2009, acc,exam id  2010, acc,exam id  2010-01, acc,exam id  2010-02, acc,exam id  2011, and 72 more."
+}

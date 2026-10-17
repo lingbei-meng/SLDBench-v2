@@ -1,0 +1,65 @@
+{
+  "task_id": "hf_smcleish_scaling_laws_cache_loss_scaling",
+  "description": "Cached Language-model Loss Scaling",
+  "source": {
+    "id": "hf_smcleish_scaling_laws_cache",
+    "urls": [
+      "https://huggingface.co/datasets/smcleish/scaling-laws-cache"
+    ],
+    "title": "Cached Language-model Loss Scaling"
+  },
+  "contract": {
+    "features": [
+      "params",
+      "training_flops"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 20,
+    "test": 6,
+    "total": 26,
+    "groups": 2
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "FLOPs_6N",
+      "bucket",
+      "depth",
+      "params",
+      "params_with_embeds",
+      "target_column",
+      "tokens",
+      "wd_ratio",
+      "width",
+      "training_flops",
+      "loss",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "FLOPs_6N",
+      "bucket",
+      "depth",
+      "params",
+      "params_with_embeds",
+      "target_column",
+      "tokens",
+      "wd_ratio",
+      "width",
+      "training_flops",
+      "loss",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Cached predicted loss reported by the source."
+}

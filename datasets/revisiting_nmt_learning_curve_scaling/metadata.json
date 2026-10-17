@@ -1,0 +1,54 @@
+{
+  "task_id": "revisiting_nmt_learning_curve_scaling",
+  "description": "Extrapolate neural-machine-translation log-perplexity from early seen-example curves.",
+  "source": {
+    "id": "google_revisiting_scaling_nmt",
+    "urls": [
+      "https://github.com/google-research/google-research/tree/master/revisiting_neural_scaling_laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "seen_examples",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 40,
+    "test": 13,
+    "total": 53,
+    "groups": 5
+  },
+  "columns": {
+    "train": [
+      "group",
+      "domain",
+      "task_name",
+      "model_name",
+      "model_parameter_count",
+      "seen_examples",
+      "loss",
+      "official_training_split",
+      "source_row_index",
+      "cost_flops"
+    ],
+    "test": [
+      "group",
+      "domain",
+      "task_name",
+      "model_name",
+      "model_parameter_count",
+      "seen_examples",
+      "loss",
+      "official_training_split",
+      "source_row_index",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported loss; smaller values represent better performance."
+}

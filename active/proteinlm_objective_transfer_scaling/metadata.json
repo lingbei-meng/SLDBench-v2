@@ -1,0 +1,46 @@
+{
+  "task_id": "proteinlm_objective_transfer_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "model_parameter_count",
+      "training_compute_flops",
+      "source_pretrain_flops",
+      "total_compute_flops",
+      "transfer_indicator"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`training_compute_flops`",
+      "columns": [
+        "training_compute_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 2655,
+    "pool_cost": 4.2859434442451e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "model_parameter_count",
+    "training_compute_flops",
+    "source_pretrain_flops",
+    "total_compute_flops",
+    "transfer_indicator",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/proteinlm_objective_transfer_scaling/test.parquet",
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

@@ -1,0 +1,49 @@
+{
+  "task_id": "openclip_zeroshot_scaling",
+  "description": "Predict OpenCLIP zero-shot classification and retrieval quality across training-sample and architecture-compute scales.",
+  "source": {
+    "id": "openclip_zeroshot",
+    "urls": [
+      "https://github.com/LAION-AI/scaling-laws-openclip"
+    ]
+  },
+  "contract": {
+    "features": [
+      "training_tokens",
+      "compute_flops",
+      "cost"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 2528,
+    "test": 690,
+    "total": 3218,
+    "groups": 115
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "training_tokens",
+      "compute_flops",
+      "cost",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "training_tokens",
+      "compute_flops",
+      "cost",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are acc1, acc5, image retrieval recall@5, mean average precision, mean per class recall, text retrieval recall@5."
+}

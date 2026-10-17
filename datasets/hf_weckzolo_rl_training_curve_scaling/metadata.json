@@ -1,0 +1,62 @@
+{
+  "task_id": "hf_weckzolo_rl_training_curve_scaling",
+  "description": "RL Training-curve Scaling",
+  "source": {
+    "id": "hf_weckzolo_rl_training_logs",
+    "urls": [
+      "https://huggingface.co/datasets/weckzolo/rl-training-logs"
+    ],
+    "title": "RL Training-curve Scaling"
+  },
+  "contract": {
+    "features": [
+      "epoch_step",
+      "ece_weight_shifted",
+      "learning_rate"
+    ],
+    "target": "metric_value",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 2742,
+    "test": 684,
+    "total": 3426,
+    "groups": 3
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "metric",
+      "source_epoch",
+      "train_acc",
+      "train_macro_acc",
+      "epoch_step",
+      "ece_weight_shifted",
+      "learning_rate",
+      "metric_value",
+      "cost_flops",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "metric",
+      "source_epoch",
+      "train_acc",
+      "train_macro_acc",
+      "epoch_step",
+      "ece_weight_shifted",
+      "learning_rate",
+      "metric_value",
+      "cost_flops",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Test loss, test accuracy, or macro test accuracy."
+}

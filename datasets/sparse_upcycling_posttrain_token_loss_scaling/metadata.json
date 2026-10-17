@@ -1,0 +1,64 @@
+{
+  "task_id": "sparse_upcycling_posttrain_token_loss_scaling",
+  "description": "Extrapolate upcycled-MoE validation loss to the largest released upcycling-token budget at fixed dense pretraining budgets.",
+  "source": {
+    "id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "urls": [
+      "https://github.com/sbintuitions/sparse-upcycling-scaling-laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "active_parameters_b",
+      "upcycling_tokens_b",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 120,
+    "test": 30,
+    "total": 150,
+    "groups": 30
+  },
+  "columns": {
+    "train": [
+      "model",
+      "learning_rate",
+      "dense_parameters_b",
+      "active_parameters_b",
+      "total_active_parameters_b",
+      "pretraining_tokens_b",
+      "upcycling_tokens_b",
+      "validation_loss",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "model",
+      "learning_rate",
+      "dense_parameters_b",
+      "active_parameters_b",
+      "total_active_parameters_b",
+      "pretraining_tokens_b",
+      "upcycling_tokens_b",
+      "validation_loss",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "method": "exact official text results parsed with the repository notebook's model parameter and iteration-to-token mappings",
+    "minimum_distinct_scales_per_curve": 4,
+    "parameter_units": "billions of parameters",
+    "token_units": "billions of tokens",
+    "approximate": false
+  }
+}

@@ -1,0 +1,46 @@
+schema_version = "1.4"
+
+# The verifier runs in its own container, so everything it grades has to be
+# collected out of the agent's: /app carries law.py, explain.md and whatever
+# else the law loads, and the ledger carries what was spent.
+artifacts = [
+    { source = "/app" },
+    { source = "/var/lib/oracle/ledger.jsonl" },
+]
+
+[task]
+name = "scaling-law-active/steplaw-hyperparameter-loss-scaling-costaware"
+version = "0.1.0"
+description = "Cost-aware variant: predict dense and MoE smoothed pretraining loss across model, data, learning-rate, and batch-size scales"
+authors = [{ name = "Scaling-law cost-aware conversion", email = "" }]
+keywords = ["scaling-law", "scientific-discovery", "extrapolation", "cost-aware", "active-learning"]
+
+[metadata]
+difficulty = "hard"
+difficulty_explanation = "The agent must choose which experiments to pay for under a FLOPs cost objective, then extrapolate beyond every observation it bought."
+category = "scientific_discovery"
+tags = ["scaling_law", "symbolic_regression", "harbor", "cost_aware", "active_selection"]
+custom_docker_compose = false
+
+[agent]
+timeout_sec = 3600.0
+# Unprivileged, so the answer table and spend ledger are unreachable. Harbor
+# applies this to the oracle agent too, so the reference solution pays as well.
+user = "agent"
+
+[verifier]
+timeout_sec = 600.0
+# A dedicated container: the grader and the hidden split never exist inside the
+# environment the agent controls.
+environment_mode = "separate"
+# Root in that dedicated container, so reading the root-owned spend ledger
+# Harbor re-materializes at /var/lib/oracle/ledger.jsonl never depends on the
+# mode the artifact happened to be copied with.
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 8192

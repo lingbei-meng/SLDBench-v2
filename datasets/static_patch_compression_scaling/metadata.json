@@ -1,0 +1,60 @@
+{
+  "task_id": "static_patch_compression_scaling",
+  "description": "Predict static-patching C4 loss across model, data, and patch-size scales.",
+  "source": {
+    "id": "facebookresearch_compute_optimal_tokenization_static",
+    "urls": [
+      "https://github.com/facebookresearch/compute-optimal-tokenization"
+    ]
+  },
+  "contract": {
+    "features": [
+      "model_parameter_count",
+      "global_parameter_count",
+      "training_data_bytes",
+      "patch_size",
+      "layers",
+      "dimension"
+    ],
+    "target": "c4_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 54,
+    "test": 18,
+    "total": 72,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "group",
+      "configuration_id",
+      "model_parameter_count",
+      "global_parameter_count",
+      "training_data_bytes",
+      "patch_size",
+      "layers",
+      "dimension",
+      "training_steps",
+      "bytes_per_parameter",
+      "c4_loss"
+    ],
+    "test": [
+      "group",
+      "configuration_id",
+      "model_parameter_count",
+      "global_parameter_count",
+      "training_data_bytes",
+      "patch_size",
+      "layers",
+      "dimension",
+      "training_steps",
+      "bytes_per_parameter",
+      "c4_loss"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported c4 loss; smaller values represent better performance."
+}

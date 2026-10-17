@@ -1,0 +1,54 @@
+{
+  "task_id": "loss_to_loss_transfer_scaling",
+  "description": "Discover a transfer scaling law that predicts target validation loss from source validation loss and model scale across LLM pretraining datasets.",
+  "source": {
+    "id": "llm_line",
+    "urls": [
+      "https://github.com/brendel-group/llm-line"
+    ]
+  },
+  "contract": {
+    "features": [
+      "source_loss",
+      "model_size",
+      "tokens",
+      "flops_proxy"
+    ],
+    "target": "target_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 118480,
+    "test": 29620,
+    "total": 148100,
+    "groups": 20
+  },
+  "columns": {
+    "train": [
+      "model_id",
+      "architecture",
+      "pretraining_data",
+      "model_size",
+      "tokens",
+      "flops_proxy",
+      "group",
+      "source_loss",
+      "target_loss"
+    ],
+    "test": [
+      "model_id",
+      "architecture",
+      "pretraining_data",
+      "model_size",
+      "tokens",
+      "flops_proxy",
+      "group",
+      "source_loss",
+      "target_loss"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported target_loss."
+}

@@ -1,0 +1,62 @@
+{
+  "task_id": "steplaw_hyperparameter_loss_scaling",
+  "description": "Predict dense and MoE smoothed pretraining loss across model, data, learning-rate, and batch-size scales.",
+  "source": {
+    "id": "steplaw_hyperparameter_loss",
+    "urls": [
+      "https://github.com/step-law/steplaw"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "learning_rate",
+      "batch_size"
+    ],
+    "target": "smooth_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 1528,
+    "test": 383,
+    "total": 1911,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "parameter_count",
+      "training_tokens",
+      "learning_rate",
+      "batch_size",
+      "architecture",
+      "hidden_size",
+      "layers",
+      "attention_heads",
+      "experts",
+      "top_k",
+      "smooth_loss"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "parameter_count",
+      "training_tokens",
+      "learning_rate",
+      "batch_size",
+      "architecture",
+      "hidden_size",
+      "layers",
+      "attention_heads",
+      "experts",
+      "top_k",
+      "smooth_loss"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported smooth loss; smaller values represent better performance."
+}

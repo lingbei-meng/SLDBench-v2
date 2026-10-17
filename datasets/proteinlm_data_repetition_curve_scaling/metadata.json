@@ -1,0 +1,53 @@
+{
+  "task_id": "proteinlm_data_repetition_curve_scaling",
+  "description": "Forecast late protein validation-loss curves across objectives, model scales, and data-repetition regimes.",
+  "source": {
+    "id": "cxysteven_scalingproteinlm_ur50_repetition",
+    "urls": [
+      "https://github.com/cxysteven/ScalingProteinLM"
+    ]
+  },
+  "contract": {
+    "features": [
+      "training_tokens"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 1014,
+    "test": 255,
+    "total": 1269,
+    "groups": 2
+  },
+  "columns": {
+    "train": [
+      "group",
+      "objective",
+      "data_regime",
+      "shuffle_regime",
+      "run_id",
+      "source_file",
+      "value_transform",
+      "checkpoint_index",
+      "training_tokens",
+      "validation_loss"
+    ],
+    "test": [
+      "group",
+      "objective",
+      "data_regime",
+      "shuffle_regime",
+      "run_id",
+      "source_file",
+      "value_transform",
+      "checkpoint_index",
+      "training_tokens",
+      "validation_loss"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

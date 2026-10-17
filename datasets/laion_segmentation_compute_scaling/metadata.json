@@ -1,0 +1,74 @@
+{
+  "task_id": "laion_segmentation_compute_scaling",
+  "description": "Predict ADE20K mIoU across CLIP/MaMMUT data, parameter, and compute scales.",
+  "source": {
+    "id": "laion_scaling_laws_comparison_segmentation_compute",
+    "urls": [
+      "https://github.com/LAION-AI/scaling-laws-for-comparison"
+    ]
+  },
+  "contract": {
+    "features": [
+      "samples_seen",
+      "training_compute_flops",
+      "model_parameter_count",
+      "image_parameter_count",
+      "text_parameter_count",
+      "model_inference_flops",
+      "learning_rate",
+      "global_batch_size"
+    ],
+    "target": "segmentation_miou",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 611,
+    "test": 154,
+    "total": 765,
+    "groups": 2
+  },
+  "columns": {
+    "train": [
+      "group",
+      "namespace",
+      "run_id",
+      "model_id",
+      "model_name",
+      "samples_seen",
+      "training_compute_flops",
+      "model_parameter_count",
+      "image_parameter_count",
+      "text_parameter_count",
+      "model_inference_flops",
+      "learning_rate",
+      "global_batch_size",
+      "train_contrastive_loss",
+      "train_caption_loss",
+      "caption_objective_indicator",
+      "segmentation_miou"
+    ],
+    "test": [
+      "group",
+      "namespace",
+      "run_id",
+      "model_id",
+      "model_name",
+      "samples_seen",
+      "training_compute_flops",
+      "model_parameter_count",
+      "image_parameter_count",
+      "text_parameter_count",
+      "model_inference_flops",
+      "learning_rate",
+      "global_batch_size",
+      "train_contrastive_loss",
+      "train_caption_loss",
+      "caption_objective_indicator",
+      "segmentation_miou"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported scalar quantity `segmentation_miou` (segmentation miou) predicted for each group."
+}

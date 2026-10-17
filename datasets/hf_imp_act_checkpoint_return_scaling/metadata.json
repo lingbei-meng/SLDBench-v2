@@ -1,0 +1,58 @@
+{
+  "task_id": "hf_imp_act_checkpoint_return_scaling",
+  "description": "IMP-ACT Checkpoint Return Scaling",
+  "source": {
+    "id": "hf_ai_for_infrastructure_management_imp_act_benchmark_results",
+    "urls": [
+      "https://huggingface.co/datasets/AI-for-Infrastructure-Management/imp-act-benchmark-results"
+    ],
+    "title": "IMP-ACT Checkpoint Return Scaling"
+  },
+  "contract": {
+    "features": [
+      "checkpoint_step"
+    ],
+    "target": "mean_return",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 8000,
+    "test": 2000,
+    "total": 10000,
+    "groups": 100
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "algorithm",
+      "map_name",
+      "replicate_count",
+      "source_checkpoint_id",
+      "wandb_run_id",
+      "checkpoint_step",
+      "mean_return",
+      "cost_flops",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "algorithm",
+      "map_name",
+      "replicate_count",
+      "source_checkpoint_id",
+      "wandb_run_id",
+      "checkpoint_step",
+      "mean_return",
+      "cost_flops",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Mean benchmark return averaged over available evaluation replicates."
+}

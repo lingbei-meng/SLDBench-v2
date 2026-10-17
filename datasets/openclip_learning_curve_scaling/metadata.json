@@ -1,0 +1,46 @@
+{
+  "task_id": "openclip_learning_curve_scaling",
+  "description": "Predict ImageNet zero-shot learning curves across OpenCLIP architecture families, epochs, and cumulative training samples.",
+  "source": {
+    "id": "openclip_learning",
+    "urls": [
+      "https://github.com/LAION-AI/scaling-laws-openclip"
+    ]
+  },
+  "contract": {
+    "features": [
+      "training_tokens",
+      "step"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 3709,
+    "test": 930,
+    "total": 4639,
+    "groups": 8
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "training_tokens",
+      "step",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "training_tokens",
+      "step",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are imagenet-zeroshot-val-top1, imagenet-zeroshot-val-top5."
+}

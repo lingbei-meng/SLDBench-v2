@@ -1,0 +1,58 @@
+{
+  "task_id": "hf_mteb_pt_parameter_performance_scaling",
+  "description": "Portuguese MTEB Parameter-performance Scaling",
+  "source": {
+    "id": "hf_mteb_pt_mteb_pt_results",
+    "urls": [
+      "https://huggingface.co/datasets/mteb-pt/mteb-pt-results"
+    ],
+    "title": "Portuguese MTEB Parameter-performance Scaling"
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "benchmark_score",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 575,
+    "test": 161,
+    "total": 736,
+    "groups": 23
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "metric",
+      "model",
+      "model_type",
+      "parameter_source",
+      "rank",
+      "parameter_count",
+      "benchmark_score",
+      "cost_flops",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "metric",
+      "model",
+      "model_type",
+      "parameter_source",
+      "rank",
+      "parameter_count",
+      "benchmark_score",
+      "cost_flops",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Portuguese MTEB task or aggregate score."
+}

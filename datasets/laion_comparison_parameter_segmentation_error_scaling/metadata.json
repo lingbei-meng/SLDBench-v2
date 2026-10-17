@@ -1,0 +1,89 @@
+{
+  "task_id": "laion_comparison_parameter_segmentation_error_scaling",
+  "description": "Extrapolate exact ADE20K segmentation-error envelopes to the largest parameter count.",
+  "source": {
+    "id": "laion_scaling_laws_for_comparison",
+    "urls": [
+      "https://github.com/LAION-AI/scaling-laws-for-comparison"
+    ]
+  },
+  "contract": {
+    "features": [
+      "model_mparams",
+      "cost_flops"
+    ],
+    "target": "segmentation_error",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 171,
+    "test": 60,
+    "total": 231,
+    "groups": 22
+  },
+  "columns": {
+    "train": [
+      "model",
+      "model_simple_namespace",
+      "namespace",
+      "pretrain_dataset",
+      "downstream_dataset",
+      "epoch",
+      "total_epochs",
+      "samples_seen",
+      "gflops",
+      "model_mparams",
+      "lr_scheduler",
+      "lr",
+      "warmup",
+      "global_batch_size",
+      "eval_type",
+      "miou",
+      "source_row",
+      "segmentation_error",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "model",
+      "model_simple_namespace",
+      "namespace",
+      "pretrain_dataset",
+      "downstream_dataset",
+      "epoch",
+      "total_epochs",
+      "samples_seen",
+      "gflops",
+      "model_mparams",
+      "lr_scheduler",
+      "lr",
+      "warmup",
+      "global_batch_size",
+      "eval_type",
+      "miou",
+      "source_row",
+      "segmentation_error",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported segmentation error; smaller values represent better performance.",
+  "measurement_provenance": {
+    "source_table": "scaling_laws/data/segmentation_results.parquet",
+    "method": "exact final-checkpoint rows from the official release; the exact released row with minimum error or loss is selected at duplicate independent scales, matching the paper's best-performance envelope",
+    "minimum_distinct_scales_per_curve": 4,
+    "legacy_pretraining_datasets_excluded": [
+      "CLIP-WIT",
+      "LAION-80M",
+      "LAION-400M",
+      "LAION-2B"
+    ],
+    "legacy_exclusion_reason": "avoid overlap with the earlier scaling-laws-openclip release already represented in this collection",
+    "approximate": false
+  }
+}

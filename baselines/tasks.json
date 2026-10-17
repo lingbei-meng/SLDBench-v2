@@ -1,0 +1,407 @@
+{
+  "colpret_ibm_model_token_boolq_accuracy_scaling_costaware": {
+    "task_id": "T01",
+    "label": "IBM BoolQ",
+    "source": "ColPret",
+    "contract": {
+      "target": "boolq_accuracy",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_ibm_model_token_openbookqa_accuracy_scaling_costaware": {
+    "task_id": "T02",
+    "label": "IBM OpenBookQA",
+    "source": "ColPret",
+    "contract": {
+      "target": "openbookqa_accuracy",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_ibm_model_token_openbookqa_normalized_accuracy_scaling_costaware": {
+    "task_id": "T03",
+    "label": "IBM OpenBookQA norm.",
+    "source": "ColPret",
+    "contract": {
+      "target": "openbookqa_normalized_accuracy",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_ibm_model_token_race_high_accuracy_scaling_costaware": {
+    "task_id": "T04",
+    "label": "IBM RACE-high",
+    "source": "ColPret",
+    "contract": {
+      "target": "race_high_accuracy",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_ibm_model_token_winogrande_accuracy_scaling_costaware": {
+    "task_id": "T05",
+    "label": "IBM WinoGrande",
+    "source": "ColPret",
+    "contract": {
+      "target": "winogrande_accuracy",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_olmo_training_token_copa_accuracy_scaling_costaware": {
+    "task_id": "T06",
+    "label": "OLMo COPA",
+    "source": "ColPret",
+    "contract": {
+      "target": "copa_accuracy",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_olmo_training_token_piqa_normalized_accuracy_scaling_costaware": {
+    "task_id": "T07",
+    "label": "OLMo PIQA norm.",
+    "source": "ColPret",
+    "contract": {
+      "target": "piqa_normalized_accuracy",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling_costaware": {
+    "task_id": "T08",
+    "label": "OPT Code lines",
+    "source": "ColPret",
+    "contract": {
+      "target": "codelinedescription_accuracy_percent",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_opt_training_token_humanorganssenses_accuracy_percent_scaling_costaware": {
+    "task_id": "T09",
+    "label": "OPT Human senses",
+    "source": "ColPret",
+    "contract": {
+      "target": "humanorganssenses_accuracy_percent",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_opt_training_token_implicatures_accuracy_percent_scaling_costaware": {
+    "task_id": "T10",
+    "label": "OPT Implicatures",
+    "source": "ColPret",
+    "contract": {
+      "target": "implicatures_accuracy_percent",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_opt_training_token_swahilienglishproverbs_accuracy_percent_scaling_costaware": {
+    "task_id": "T11",
+    "label": "OPT Swahili proverbs",
+    "source": "ColPret",
+    "contract": {
+      "target": "swahilienglishproverbs_accuracy_percent",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "colpret_opt_training_token_whatisthetao_accuracy_percent_scaling_costaware": {
+    "task_id": "T12",
+    "label": "OPT Tao",
+    "source": "ColPret",
+    "contract": {
+      "target": "whatisthetao_accuracy_percent",
+      "features": [
+        "total_parameters",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "compute_optimal_tokenization_scaling_costaware": {
+    "task_id": "T13",
+    "label": "Tokenization",
+    "source": "Compute-optimal tokenization",
+    "contract": {
+      "target": "c4_loss",
+      "features": [
+        "compute_flops",
+        "model_parameter_count",
+        "global_parameter_count",
+        "training_data_bytes",
+        "patch_size"
+      ],
+      "grouped": true
+    }
+  },
+  "datablations_training_token_loss_scaling_costaware": {
+    "task_id": "T14",
+    "label": "Datablations / token--loss",
+    "source": "Datablations",
+    "contract": {
+      "target": "validation_loss",
+      "features": [
+        "parameter_count",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "dclm_controlled_benchmark_scaling_costaware": {
+    "task_id": "T15",
+    "label": "DCLM controlled benchmark",
+    "source": "DCLM",
+    "contract": {
+      "target": "target",
+      "features": [
+        "parameter_count",
+        "training_tokens"
+      ],
+      "grouped": true
+    }
+  },
+  "gemstones_validation_curve_scaling_costaware": {
+    "task_id": "T16",
+    "label": "Gemstones curve",
+    "source": "Gemstones",
+    "contract": {
+      "target": "validation_loss",
+      "features": [
+        "parameter_count",
+        "checkpoint_training_tokens",
+        "training_progress",
+        "max_learning_rate",
+        "width",
+        "depth"
+      ],
+      "grouped": true
+    }
+  },
+  "hf_mteb_pt_parameter_performance_scaling_costaware": {
+    "task_id": "T17",
+    "label": "MTEB / param.--performance",
+    "source": "Portuguese MTEB",
+    "contract": {
+      "target": "benchmark_score",
+      "features": [
+        "parameter_count"
+      ],
+      "grouped": true
+    }
+  },
+  "laion_comparison_compute_downstream_error_scaling_costaware": {
+    "task_id": "T18",
+    "label": "LAION / compute--downstream error",
+    "source": "LAION comparisons",
+    "contract": {
+      "target": "error_rate",
+      "features": [
+        "gflops_total",
+        "cost_flops"
+      ],
+      "grouped": true
+    }
+  },
+  "laion_comparison_parameter_downstream_error_scaling_costaware": {
+    "task_id": "T19",
+    "label": "LAION / param.--downstream error",
+    "source": "LAION comparisons",
+    "contract": {
+      "target": "error_rate",
+      "features": [
+        "mparams",
+        "cost_flops"
+      ],
+      "grouped": true
+    }
+  },
+  "laion_comparison_sample_contrastive_loss_scaling_costaware": {
+    "task_id": "T20",
+    "label": "LAION / sample--contrastive loss",
+    "source": "LAION comparisons",
+    "contract": {
+      "target": "contrastive_loss",
+      "features": [
+        "mparams",
+        "total_samples_seen",
+        "cost_flops"
+      ],
+      "grouped": true
+    }
+  },
+  "laion_comparison_sample_downstream_error_scaling_costaware": {
+    "task_id": "T21",
+    "label": "LAION / sample--downstream error",
+    "source": "LAION comparisons",
+    "contract": {
+      "target": "error_rate",
+      "features": [
+        "total_samples_seen",
+        "cost_flops"
+      ],
+      "grouped": true
+    }
+  },
+  "laion_comparison_sample_segmentation_error_scaling_costaware": {
+    "task_id": "T22",
+    "label": "LAION / sample--segmentation error",
+    "source": "LAION comparisons",
+    "contract": {
+      "target": "segmentation_error",
+      "features": [
+        "model_mparams",
+        "samples_seen",
+        "cost_flops"
+      ],
+      "grouped": true
+    }
+  },
+  "loss_to_loss_transfer_scaling_costaware": {
+    "task_id": "T23",
+    "label": "Loss-to-loss transfer",
+    "source": "Loss-to-loss transfer",
+    "contract": {
+      "target": "target_loss",
+      "features": [
+        "source_loss",
+        "model_size",
+        "tokens",
+        "flops_proxy"
+      ],
+      "grouped": true
+    }
+  },
+  "misfitting_checkpoint_token_loss_scaling_costaware": {
+    "task_id": "T24",
+    "label": "Misfitting / checkpoint token--loss",
+    "source": "Misfitting",
+    "contract": {
+      "target": "loss",
+      "features": [
+        "N",
+        "D"
+      ],
+      "grouped": true
+    }
+  },
+  "misfitting_final_compute_loss_scaling_costaware": {
+    "task_id": "T25",
+    "label": "Misfitting / final compute--loss",
+    "source": "Misfitting",
+    "contract": {
+      "target": "loss",
+      "features": [
+        "N",
+        "C_no_emb",
+        "cost_flops"
+      ],
+      "grouped": true
+    }
+  },
+  "overtraining_loss_scaling_costaware": {
+    "task_id": "T26",
+    "label": "Overtraining loss",
+    "source": "Overtraining",
+    "contract": {
+      "target": "loss",
+      "features": [
+        "params_no_embed",
+        "train_tokens",
+        "chinchilla_multiplier"
+      ],
+      "grouped": true
+    }
+  },
+  "owt_batch_size_training_loss_scaling_costaware": {
+    "task_id": "T27",
+    "label": "OWT / batch size--training loss",
+    "source": "OpenWebText histories",
+    "contract": {
+      "target": "training_loss",
+      "features": [
+        "training_compute_flops",
+        "global_batch_sequences",
+        "peak_learning_rate"
+      ],
+      "grouped": true
+    }
+  },
+  "proteinlm_compute_loss_scaling_costaware": {
+    "task_id": "T28",
+    "label": "ProteinLM / compute--loss",
+    "source": "ProteinLM compute--loss",
+    "contract": {
+      "target": "validation_loss",
+      "features": [
+        "compute_flops",
+        "model_parameter_count"
+      ],
+      "grouped": true
+    }
+  },
+  "revisiting_nmt_learning_curve_scaling_costaware": {
+    "task_id": "T29",
+    "label": "Revisiting NMT learning curve",
+    "source": "Revisiting NMT",
+    "contract": {
+      "target": "loss",
+      "features": [
+        "seen_examples",
+        "cost_flops"
+      ],
+      "grouped": true
+    }
+  },
+  "steplaw_hyperparameter_loss_scaling_costaware": {
+    "task_id": "T30",
+    "label": "StepLaw hyperparam. loss",
+    "source": "StepLaw",
+    "contract": {
+      "target": "smooth_loss",
+      "features": [
+        "parameter_count",
+        "training_tokens",
+        "learning_rate",
+        "batch_size"
+      ],
+      "grouped": true
+    }
+  }
+}

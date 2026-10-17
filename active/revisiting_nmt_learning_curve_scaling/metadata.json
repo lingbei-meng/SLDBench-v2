@@ -1,0 +1,39 @@
+{
+  "task_id": "revisiting_nmt_learning_curve_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "seen_examples",
+      "cost_flops"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`cost_flops`",
+      "columns": [
+        "cost_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 40,
+    "pool_cost": 1.6065e+18,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "seen_examples",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/revisiting_nmt_learning_curve_scaling/test.parquet",
+  "target_description": "Source-reported loss; smaller values represent better performance."
+}

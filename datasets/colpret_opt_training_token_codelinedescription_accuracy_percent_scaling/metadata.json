@@ -1,0 +1,59 @@
+{
+  "task_id": "colpret_opt_training_token_codelinedescription_accuracy_percent_scaling",
+  "description": "Extrapolate BIG-Bench code-line description accuracy with training tokens across OPT model scales.",
+  "source": {
+    "id": "ibm_colpret_hitchhiker_scaling_2025",
+    "urls": [
+      "https://github.com/IBM/ColPret"
+    ]
+  },
+  "contract": {
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "codelinedescription_accuracy_percent",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 114,
+    "test": 33,
+    "total": 147,
+    "groups": 6
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_name",
+      "size",
+      "total_parameters",
+      "steps",
+      "training_tokens",
+      "training_compute_flops",
+      "codelinedescription_accuracy_percent",
+      "source_row",
+      "split"
+    ],
+    "test": [
+      "group",
+      "model_name",
+      "size",
+      "total_parameters",
+      "steps",
+      "training_tokens",
+      "training_compute_flops",
+      "codelinedescription_accuracy_percent",
+      "source_row",
+      "split"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported codelinedescription accuracy percent; larger values represent better performance.",
+  "measurement_provenance": {
+    "method": "direct official ColPret aggregated evaluation rows",
+    "raw_metric_column": "bigbench__codelinedescription",
+    "approximate": false
+  }
+}

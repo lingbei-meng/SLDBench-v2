@@ -1,0 +1,58 @@
+{
+  "task_id": "datablations_training_token_loss_scaling",
+  "description": "Extrapolate DataBlations validation loss to larger training-token budgets at fixed model and unique-data scales.",
+  "source": {
+    "id": "huggingface_datablations",
+    "urls": [
+      "https://github.com/huggingface/datablations"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 85,
+    "test": 29,
+    "total": 114,
+    "groups": 14
+  },
+  "columns": {
+    "train": [
+      "parameter_count",
+      "unique_tokens",
+      "training_tokens",
+      "validation_loss",
+      "repeat_ratio",
+      "compute_flops",
+      "source_model_count",
+      "group",
+      "split"
+    ],
+    "test": [
+      "parameter_count",
+      "unique_tokens",
+      "training_tokens",
+      "validation_loss",
+      "repeat_ratio",
+      "compute_flops",
+      "source_model_count",
+      "group",
+      "split"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "notebook": "plotstables/return_alloc.ipynb",
+    "cell": 1,
+    "method": "exact literal model-loss and parameter/token mappings; source loss=0 entries and notebook-excluded seed/opt/dedup variants omitted",
+    "approximate": false
+  }
+}

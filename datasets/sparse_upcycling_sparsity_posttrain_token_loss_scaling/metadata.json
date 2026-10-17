@@ -1,0 +1,64 @@
+{
+  "task_id": "sparse_upcycling_sparsity_posttrain_token_loss_scaling",
+  "description": "Extrapolate the official sparsity sweep's validation loss to the largest upcycling-token budget.",
+  "source": {
+    "id": "sb_intuitions_sparse_upcycling_scaling_laws",
+    "urls": [
+      "https://github.com/sbintuitions/sparse-upcycling-scaling-laws"
+    ]
+  },
+  "contract": {
+    "features": [
+      "total_parameters_b",
+      "upcycling_tokens_b",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 213,
+    "test": 57,
+    "total": 270,
+    "groups": 53
+  },
+  "columns": {
+    "train": [
+      "model",
+      "dense_parameters_b",
+      "active_parameters_b",
+      "total_parameters_b",
+      "pretraining_tokens_b",
+      "upcycling_tokens_b",
+      "validation_loss",
+      "parameter_usage_ratio",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "model",
+      "dense_parameters_b",
+      "active_parameters_b",
+      "total_parameters_b",
+      "pretraining_tokens_b",
+      "upcycling_tokens_b",
+      "validation_loss",
+      "parameter_usage_ratio",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "method": "exact official sparsity experiment table",
+    "minimum_distinct_scales_per_curve": 4,
+    "parameter_units": "billions of parameters",
+    "token_units": "billions of tokens",
+    "approximate": false
+  }
+}

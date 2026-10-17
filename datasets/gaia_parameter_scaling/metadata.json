@@ -1,0 +1,43 @@
+{
+  "task_id": "gaia_parameter_scaling",
+  "description": "Predict GAIA agent performance where the underlying model parameter scale is explicitly published.",
+  "source": {
+    "id": "gaia",
+    "urls": [
+      "https://huggingface.co/datasets/gaia-benchmark/results_public"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 40,
+    "test": 12,
+    "total": 52,
+    "groups": 4
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are score, score level1, score level2, score level3."
+}

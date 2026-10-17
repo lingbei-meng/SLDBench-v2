@@ -1,0 +1,41 @@
+{
+  "task_id": "misfitting_checkpoint_token_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "N",
+      "D"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "6ND_proxy",
+      "detail": "6 x `N` x `train_tokens`",
+      "columns": [
+        "N",
+        "train_tokens"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 3637,
+    "pool_cost": 2.096509558711119e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "N",
+    "D",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/misfitting_checkpoint_token_loss_scaling/test.parquet",
+  "target_description": "Source-reported loss; smaller values represent better performance."
+}

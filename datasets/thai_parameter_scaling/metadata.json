@@ -1,0 +1,43 @@
+{
+  "task_id": "thai_parameter_scaling",
+  "description": "Predict Thai leaderboard metrics across explicitly labeled model parameter scales.",
+  "source": {
+    "id": "thai",
+    "urls": [
+      "https://huggingface.co/datasets/ThaiLLM-Leaderboard/results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 270,
+    "test": 81,
+    "total": 351,
+    "groups": 27
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are BLEU, ROUGE1, ROUGE2, ROUGEL, SacreBLEU, accuracy, and 2 more."
+}

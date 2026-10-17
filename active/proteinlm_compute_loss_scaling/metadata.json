@@ -1,0 +1,40 @@
+{
+  "task_id": "proteinlm_compute_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "compute_flops",
+      "model_parameter_count"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`compute_flops`",
+      "columns": [
+        "compute_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 31923,
+    "pool_cost": 3.043290774990535e+24,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "compute_flops",
+    "model_parameter_count",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/proteinlm_compute_loss_scaling/test.parquet",
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

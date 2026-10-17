@@ -1,0 +1,42 @@
+schema_version = "1.4"
+
+# The verifier runs in its own container, so the submission has to be collected
+# out of the agent's: /app carries law.py, explain.md and anything the law loads.
+artifacts = [
+    { source = "/app" },
+]
+
+[task]
+name = "sldbench-v2/loss-to-loss-transfer-scaling"
+version = "0.1.0"
+description = "Discover a transfer scaling law that predicts target validation loss from source validation loss and model scale across LLM pretraining datasets."
+authors = [{ name = "SLDBench v2 draft", email = "" }]
+keywords = ["scaling-law", "loss-to-loss", "language-models", "transfer"]
+
+[metadata]
+difficulty = "medium"
+difficulty_explanation = "The task requires extrapolating loss transfer relationships to larger model and token regimes while sharing a functional form across dataset pairs."
+category = "scientific_discovery"
+tags = ["scaling_law", "symbolic_regression", "sldbench_v2", "loss_transfer"]
+custom_docker_compose = false
+
+[verifier]
+timeout_sec = 600.0
+# A dedicated container. The agent has root in its own environment, so a
+# verifier sharing it could be subverted before it ever starts -- and the
+# held-out split would land in a container the agent had already prepared.
+environment_mode = "separate"
+# Root in that dedicated container, so the grader can read the collected
+# artifacts whatever mode they were copied with. The candidate law is dropped
+# to an unprivileged uid by guard.py regardless.
+user = "root"
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 500.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 4096

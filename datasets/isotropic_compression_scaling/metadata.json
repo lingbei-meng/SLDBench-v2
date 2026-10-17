@@ -1,0 +1,64 @@
+{
+  "task_id": "isotropic_compression_scaling",
+  "description": "Predict isotropic-model C4 loss across model, data, compute, and compression scales.",
+  "source": {
+    "id": "facebookresearch_compute_optimal_tokenization_isotropic",
+    "urls": [
+      "https://github.com/facebookresearch/compute-optimal-tokenization"
+    ]
+  },
+  "contract": {
+    "features": [
+      "compute_flops",
+      "global_parameter_count",
+      "training_data_bytes",
+      "compression_rate",
+      "layers",
+      "dimension"
+    ],
+    "target": "c4_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 286,
+    "test": 72,
+    "total": 358,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "group",
+      "configuration_id",
+      "source_file",
+      "compute_flops",
+      "global_parameter_count",
+      "training_data_bytes",
+      "compression_rate",
+      "layers",
+      "dimension",
+      "heads",
+      "training_steps",
+      "bytes_per_parameter",
+      "c4_loss"
+    ],
+    "test": [
+      "group",
+      "configuration_id",
+      "source_file",
+      "compute_flops",
+      "global_parameter_count",
+      "training_data_bytes",
+      "compression_rate",
+      "layers",
+      "dimension",
+      "heads",
+      "training_steps",
+      "bytes_per_parameter",
+      "c4_loss"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported c4 loss; smaller values represent better performance."
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "owt_batch_size_training_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "training_compute_flops",
+      "global_batch_sequences",
+      "peak_learning_rate"
+    ],
+    "target": "training_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`training_compute_flops`",
+      "columns": [
+        "training_compute_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 12012,
+    "pool_cost": 2.457335153982387e+20,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "training_compute_flops",
+    "global_batch_sequences",
+    "peak_learning_rate",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/owt_batch_size_training_loss_scaling/test.parquet",
+  "target_description": "Source-reported training loss; smaller values represent better performance."
+}

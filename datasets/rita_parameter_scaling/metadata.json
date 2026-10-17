@@ -1,0 +1,43 @@
+{
+  "task_id": "rita_parameter_scaling",
+  "description": "Predict Italian evaluation metrics across published model parameter scales using aggregate results only.",
+  "source": {
+    "id": "rita",
+    "urls": [
+      "https://huggingface.co/datasets/RiTA-nlp/ita-eval-results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 236,
+    "test": 88,
+    "total": 324,
+    "groups": 44
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are acc norm,none, acc,none, bertscore,none, f1,none, mcc,none, rouge1,none, and 4 more."
+}

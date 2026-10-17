@@ -1,0 +1,41 @@
+{
+  "task_id": "colpret_olmo_training_token_piqa_normalized_accuracy_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "piqa_normalized_accuracy",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "6ND_proxy",
+      "detail": "6 x `total_parameters` x `training_tokens`",
+      "columns": [
+        "total_parameters",
+        "training_tokens"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 1366,
+    "pool_cost": 3.1273872e+25,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "total_parameters",
+    "training_tokens",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/colpret_olmo_training_token_piqa_normalized_accuracy_scaling/test.parquet",
+  "target_description": "Source-reported piqa normalized accuracy; larger values represent better performance."
+}

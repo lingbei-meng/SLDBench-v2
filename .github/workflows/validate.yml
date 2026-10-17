@@ -1,0 +1,19 @@
+name: Validate benchmark release
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt -r requirements-baselines.txt
+      - run: python tools/validate.py
+      - run: python -m benchmark.prepare --data-only
+      - run: python -m unittest discover -s tests -v
+      - run: python tools/check_release.py
+      - run: python run.py --all --repeats 3 --dry-run

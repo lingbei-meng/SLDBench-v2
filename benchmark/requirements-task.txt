@@ -1,0 +1,6 @@
+-c /tmp/requirements-task-lock.txt
+numpy==2.2.6
+pandas==2.2.3
+pyarrow==20.0.0
+scipy==1.16.2
+scikit-learn==1.7.2

@@ -1,0 +1,41 @@
+{
+  "task_id": "laion_comparison_sample_contrastive_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "mparams",
+      "total_samples_seen",
+      "cost_flops"
+    ],
+    "target": "contrastive_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`cost_flops`",
+      "columns": [
+        "cost_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 140,
+    "pool_cost": 7.6699129088e+20,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "mparams",
+    "total_samples_seen",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/laion_comparison_sample_contrastive_loss_scaling/test.parquet",
+  "target_description": "Source-reported contrastive loss; smaller values represent better performance."
+}

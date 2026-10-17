@@ -1,0 +1,44 @@
+{
+  "task_id": "loss_to_loss_transfer_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "source_loss",
+      "model_size",
+      "tokens",
+      "flops_proxy"
+    ],
+    "target": "target_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`flops_proxy`",
+      "columns": [
+        "flops_proxy"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 118480,
+    "pool_cost": 7.920320127503228e+23,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "source_loss",
+    "model_size",
+    "tokens",
+    "flops_proxy",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/loss_to_loss_transfer_scaling/test.parquet",
+  "target_description": "Source-reported target_loss."
+}

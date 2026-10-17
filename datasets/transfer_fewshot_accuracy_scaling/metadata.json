@@ -1,0 +1,47 @@
+{
+  "task_id": "transfer_fewshot_accuracy_scaling",
+  "description": "Extrapolate transfer accuracy to the largest reported numeric fine-tuning shot count.",
+  "source": {
+    "id": "slampai_large_scale_pretraining_transfer",
+    "urls": [
+      "https://github.com/SLAMPAI/large-scale-pretraining-transfer"
+    ]
+  },
+  "contract": {
+    "features": [
+      "shot_count"
+    ],
+    "target": "mean_accuracy",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 88,
+    "test": 22,
+    "total": 110,
+    "groups": 22
+  },
+  "columns": {
+    "train": [
+      "group",
+      "dataset",
+      "pretrained_model",
+      "shot_count",
+      "mean_accuracy",
+      "source_seed_rows",
+      "split"
+    ],
+    "test": [
+      "group",
+      "dataset",
+      "pretrained_model",
+      "shot_count",
+      "mean_accuracy",
+      "source_seed_rows",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported mean accuracy; larger values represent better performance."
+}

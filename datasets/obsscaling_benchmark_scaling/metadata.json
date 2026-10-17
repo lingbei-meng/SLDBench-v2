@@ -1,0 +1,46 @@
+{
+  "task_id": "obsscaling_benchmark_scaling",
+  "description": "Discover observational relationships between model scale and benchmark capability in ObsScaling.",
+  "source": {
+    "id": "obsscaling",
+    "urls": [
+      "https://github.com/ryoungj/ObsScaling"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 14487,
+    "test": 3751,
+    "total": 18238,
+    "groups": 258
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are agent capability  ABench-Code DB, agent capability  ABench-Code KG, agent capability  ABench-Code OS, agent capability  ABench-Game DCG, agent capability  ABench-Game HH, agent capability  ABench-Game LTP, and 252 more."
+}

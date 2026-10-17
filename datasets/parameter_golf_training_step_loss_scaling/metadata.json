@@ -1,0 +1,49 @@
+{
+  "task_id": "parameter_golf_training_step_loss_scaling",
+  "description": "Extrapolate OpenAI Parameter Golf training loss to each run's final reported steps.",
+  "source": {
+    "id": "openai_parameter_golf",
+    "urls": [
+      "https://github.com/openai/parameter-golf"
+    ]
+  },
+  "contract": {
+    "features": [
+      "step"
+    ],
+    "target": "training_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 713,
+    "test": 188,
+    "total": 901,
+    "groups": 35
+  },
+  "columns": {
+    "train": [
+      "group",
+      "record",
+      "log_file",
+      "step",
+      "total_steps",
+      "training_loss",
+      "source_file",
+      "split"
+    ],
+    "test": [
+      "group",
+      "record",
+      "log_file",
+      "step",
+      "total_steps",
+      "training_loss",
+      "source_file",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported training loss; smaller values represent better performance."
+}

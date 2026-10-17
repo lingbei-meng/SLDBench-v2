@@ -1,0 +1,46 @@
+{
+  "task_id": "compute_optimal_tokenization_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "compute_flops",
+      "model_parameter_count",
+      "global_parameter_count",
+      "training_data_bytes",
+      "patch_size"
+    ],
+    "target": "c4_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`compute_flops`",
+      "columns": [
+        "compute_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 402,
+    "pool_cost": 4.900000000000001e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "compute_flops",
+    "model_parameter_count",
+    "global_parameter_count",
+    "training_data_bytes",
+    "patch_size",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/compute_optimal_tokenization_scaling/test.parquet",
+  "target_description": "Source-reported c4 loss; smaller values represent better performance."
+}

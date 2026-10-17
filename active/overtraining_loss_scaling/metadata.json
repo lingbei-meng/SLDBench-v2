@@ -1,0 +1,43 @@
+{
+  "task_id": "overtraining_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "params_no_embed",
+      "train_tokens",
+      "chinchilla_multiplier"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "6ND_proxy",
+      "detail": "6 x `params` x `train_tokens`",
+      "columns": [
+        "params",
+        "train_tokens"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 664,
+    "pool_cost": 7.004418450352529e+21,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "params_no_embed",
+    "train_tokens",
+    "chinchilla_multiplier",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/overtraining_loss_scaling/test.parquet",
+  "target_description": "Next-token evaluation loss from the source model JSON result entry."
+}

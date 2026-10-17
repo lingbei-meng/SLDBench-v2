@@ -1,0 +1,38 @@
+{
+  "task_id": "hf_imp_act_checkpoint_return_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "checkpoint_step"
+    ],
+    "target": "mean_return",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "explicit",
+      "detail": "`cost_flops`",
+      "columns": [
+        "cost_flops"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 8000,
+    "pool_cost": 29910000.0,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "checkpoint_step",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/hf_imp_act_checkpoint_return_scaling/test.parquet",
+  "target_description": "Mean benchmark return averaged over available evaluation replicates."
+}

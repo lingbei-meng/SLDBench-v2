@@ -1,0 +1,65 @@
+{
+  "task_id": "overtraining_loss_scaling",
+  "description": "Discover a scaling law for next-token loss of over-trained language models from model size, training tokens, and over-training multiplier.",
+  "source": {
+    "id": "mlfoundations_overtraining",
+    "urls": [
+      "https://github.com/mlfoundations/scaling",
+      "https://arxiv.org/abs/2403.08540"
+    ],
+    "title": "Language models scale reliably with over-training and on downstream tasks"
+  },
+  "contract": {
+    "features": [
+      "params_no_embed",
+      "train_tokens",
+      "chinchilla_multiplier"
+    ],
+    "target": "loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 664,
+    "test": 168,
+    "total": 832,
+    "groups": 24
+  },
+  "columns": {
+    "train": [
+      "group",
+      "train_dataset",
+      "eval_dataset",
+      "model_name",
+      "model_family",
+      "params",
+      "params_no_embed",
+      "train_tokens",
+      "chinchilla_multiplier",
+      "lr",
+      "global_bs",
+      "eval_tokens",
+      "loss",
+      "row_source"
+    ],
+    "test": [
+      "group",
+      "train_dataset",
+      "eval_dataset",
+      "model_name",
+      "model_family",
+      "params",
+      "params_no_embed",
+      "train_tokens",
+      "chinchilla_multiplier",
+      "lr",
+      "global_bs",
+      "eval_tokens",
+      "loss",
+      "row_source"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Next-token evaluation loss from the source model JSON result entry."
+}

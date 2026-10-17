@@ -1,0 +1,52 @@
+{
+  "task_id": "routing_checkpoint_loss_scaling",
+  "description": "Predict dense and sparse routed language-model learning curves across model size, routing configuration, checkpoint step, and cumulative compute.",
+  "source": {
+    "id": "routing",
+    "urls": [
+      "https://github.com/google-deepmind/scaling_laws_for_routing"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "compute_flops",
+      "step",
+      "cost"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 26966,
+    "test": 6757,
+    "total": 33723,
+    "groups": 24
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "compute_flops",
+      "step",
+      "cost",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "compute_flops",
+      "step",
+      "cost",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are loss c4, loss curation corpus, loss lambada, loss pile, loss validation, loss wikitext103."
+}

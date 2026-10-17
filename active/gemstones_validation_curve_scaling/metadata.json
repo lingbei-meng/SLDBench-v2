@@ -1,0 +1,49 @@
+{
+  "task_id": "gemstones_validation_curve_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "parameter_count",
+      "checkpoint_training_tokens",
+      "training_progress",
+      "max_learning_rate",
+      "width",
+      "depth"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "6ND_proxy",
+      "detail": "6 x `parameter_count` x `checkpoint_training_tokens`",
+      "columns": [
+        "parameter_count",
+        "checkpoint_training_tokens"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 6213,
+    "pool_cost": 1.586466414853011e+24,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "parameter_count",
+    "checkpoint_training_tokens",
+    "training_progress",
+    "max_learning_rate",
+    "width",
+    "depth",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/gemstones_validation_curve_scaling/test.parquet",
+  "target_description": "Source-reported validation loss; smaller values represent better performance."
+}

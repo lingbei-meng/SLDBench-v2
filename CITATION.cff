@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use SLDBench v2, please cite the associated paper and the original data sources."
+title: "SLDBench v2: Active Scaling Law Discovery"
+type: dataset
+authors:
+  - family-names: Meng
+    given-names: Lingbei
+  - family-names: Huang
+    given-names: Rui
+  - family-names: Shen
+    given-names: Zhirong
+  - family-names: Liu
+    given-names: Jinxin
+  - family-names: Jing
+    given-names: Lingxiao
+  - family-names: Chen
+    given-names: Haorui
+  - family-names: Du
+    given-names: Yaosong
+  - family-names: Lin
+    given-names: Haowei
+    email: linhaowei@pku.edu.cn
+url: "https://arxiv.org/abs/2610.16297"

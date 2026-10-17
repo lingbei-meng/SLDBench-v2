@@ -1,0 +1,45 @@
+{
+  "task_id": "mlfoundations_loss_to_downstream_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "source_loss",
+      "parameter_count",
+      "training_tokens",
+      "chinchilla_multiplier"
+    ],
+    "target": "top1_error",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "6ND_proxy",
+      "detail": "6 x `parameter_count` x `training_tokens`",
+      "columns": [
+        "parameter_count",
+        "training_tokens"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 3818,
+    "pool_cost": 3.2272057851703844e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "source_loss",
+    "parameter_count",
+    "training_tokens",
+    "chinchilla_multiplier",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/mlfoundations_loss_to_downstream_scaling/test.parquet",
+  "target_description": "Source-reported top1 error; smaller values represent better performance."
+}

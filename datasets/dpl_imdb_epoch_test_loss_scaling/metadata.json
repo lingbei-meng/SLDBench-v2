@@ -1,0 +1,61 @@
+{
+  "task_id": "dpl_imdb_epoch_test_loss_scaling",
+  "description": "Extrapolate 755 official DPL IMDB test-loss curves.",
+  "source": {
+    "id": "dpl_taskset_imdb_irnn64",
+    "urls": [
+      "https://github.com/machinelearningnuremberg/DPL"
+    ]
+  },
+  "contract": {
+    "features": [
+      "epoch"
+    ],
+    "target": "log1p_test_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 30955,
+    "test": 7550,
+    "total": 38505,
+    "groups": 755
+  },
+  "columns": {
+    "train": [
+      "group",
+      "source_config_index",
+      "epoch",
+      "test_loss",
+      "log1p_test_loss",
+      "split",
+      "hp_beta1",
+      "hp_beta2",
+      "hp_epsilon",
+      "hp_exponential_decay",
+      "hp_l1",
+      "hp_l2",
+      "hp_learning_rate",
+      "hp_linear_decay"
+    ],
+    "test": [
+      "group",
+      "source_config_index",
+      "epoch",
+      "test_loss",
+      "log1p_test_loss",
+      "split",
+      "hp_beta1",
+      "hp_beta2",
+      "hp_epsilon",
+      "hp_exponential_decay",
+      "hp_l1",
+      "hp_l2",
+      "hp_learning_rate",
+      "hp_linear_decay"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported log1p test loss; smaller values represent better performance."
+}

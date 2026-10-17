@@ -1,0 +1,54 @@
+{
+  "task_id": "dclm_controlled_benchmark_scaling",
+  "description": "Predict DCLM downstream benchmark metrics across controlled model-parameter and training-token scales.",
+  "source": {
+    "id": "dclm_model_database",
+    "urls": [
+      "https://github.com/mlfoundations/dclm"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "target",
+    "group": "group",
+    "context_columns": [
+      "data_recipe",
+      "model_family"
+    ],
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 583,
+    "test": 159,
+    "total": 742,
+    "groups": 53
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "data_recipe",
+      "model_family",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "data_recipe",
+      "model_family",
+      "target"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are aggregated task categories centered.commonsense reasoning, aggregated task categories centered.language understanding, aggregated task categories centered.reading comprehension, aggregated task categories centered.safety, aggregated task categories centered.symbolic problem solving, aggregated task categories centered.world knowledge, and 47 more."
+}

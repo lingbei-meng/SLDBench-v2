@@ -1,0 +1,8 @@
+{
+  "tasks": 127,
+  "active_tasks": 60,
+  "evaluation_tasks": 30,
+  "train_rows": 2694330,
+  "test_rows": 682608,
+  "prediction_records": 3376938
+}

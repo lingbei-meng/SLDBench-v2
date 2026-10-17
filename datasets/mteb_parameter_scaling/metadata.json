@@ -1,0 +1,43 @@
+{
+  "task_id": "mteb_parameter_scaling",
+  "description": "Predict MTEB task performance for public embedding models with explicit parameter-scale labels.",
+  "source": {
+    "id": "mteb",
+    "urls": [
+      "https://huggingface.co/datasets/mteb/results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 1148714,
+    "test": 288297,
+    "total": 1437011,
+    "groups": 48714
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are all, articles, default, dentistry and oral health, dermatology, dev, and 32 more."
+}

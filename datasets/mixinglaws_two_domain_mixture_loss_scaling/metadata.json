@@ -1,0 +1,66 @@
+{
+  "task_id": "mixinglaws_two_domain_mixture_loss_scaling",
+  "description": "Predict a held-out two-domain data mixture from exact controlled training results.",
+  "source": {
+    "id": "yegcjs_mixinglaws",
+    "urls": [
+      "https://github.com/yegcjs/mixinglaws",
+      "https://arxiv.org/abs/2403.16952"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "github_weight",
+      "pile_cc_weight",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 176,
+    "test": 44,
+    "total": 220,
+    "groups": 44
+  },
+  "columns": {
+    "train": [
+      "model_size_label",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "compute_flops",
+      "github_weight",
+      "pile_cc_weight",
+      "validation_domain",
+      "validation_loss",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "model_size_label",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "compute_flops",
+      "github_weight",
+      "pile_cc_weight",
+      "validation_domain",
+      "validation_loss",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "method": "exact public experiment result table",
+    "approximate": false,
+    "figure_derived": false
+  }
+}

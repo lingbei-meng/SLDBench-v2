@@ -1,0 +1,78 @@
+{
+  "task_id": "mixinglaws_five_domain_joint_scale_loss_scaling",
+  "description": "Jointly extrapolate five-domain mixture performance to the held-out 1B model scale.",
+  "source": {
+    "id": "yegcjs_mixinglaws",
+    "urls": [
+      "https://github.com/yegcjs/mixinglaws",
+      "https://arxiv.org/abs/2403.16952"
+    ]
+  },
+  "contract": {
+    "features": [
+      "academic_weight",
+      "prose_weight",
+      "dialogue_weight",
+      "symbolic_weight",
+      "internet_weight",
+      "parameter_count",
+      "training_tokens",
+      "cost_flops"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 5680,
+    "test": 1420,
+    "total": 7100,
+    "groups": 5
+  },
+  "columns": {
+    "train": [
+      "model_size_label",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "compute_flops",
+      "academic_weight",
+      "prose_weight",
+      "dialogue_weight",
+      "symbolic_weight",
+      "internet_weight",
+      "mixture_id",
+      "validation_domain",
+      "validation_loss",
+      "group",
+      "split",
+      "cost_flops"
+    ],
+    "test": [
+      "model_size_label",
+      "parameter_count",
+      "training_step",
+      "training_tokens",
+      "compute_flops",
+      "academic_weight",
+      "prose_weight",
+      "dialogue_weight",
+      "symbolic_weight",
+      "internet_weight",
+      "mixture_id",
+      "validation_domain",
+      "validation_loss",
+      "group",
+      "split",
+      "cost_flops"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Source-reported validation loss; smaller values represent better performance.",
+  "measurement_provenance": {
+    "method": "exact public experiment result table",
+    "approximate": false,
+    "figure_derived": false
+  }
+}

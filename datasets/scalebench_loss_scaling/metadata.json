@@ -1,0 +1,49 @@
+{
+  "task_id": "scalebench_loss_scaling",
+  "description": "Predict dense and sparse language-model validation loss in the non-overlapping ScaleBench configurations.",
+  "source": {
+    "id": "scalebench",
+    "urls": [
+      "https://huggingface.co/datasets/sijieli/scalebench"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "compute_flops"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 394,
+    "test": 101,
+    "total": 495,
+    "groups": 4
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "compute_flops",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "compute_flops",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are D1=2.31 D2=1.15, D1=2.31 D2=2.31, D1=2.31 D2=4.61, all data."
+}

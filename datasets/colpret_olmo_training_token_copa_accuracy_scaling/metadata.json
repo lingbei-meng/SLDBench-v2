@@ -1,0 +1,58 @@
+{
+  "task_id": "colpret_olmo_training_token_copa_accuracy_scaling",
+  "description": "Extrapolate OLMo COPA accuracy with training tokens.",
+  "source": {
+    "id": "ibm_colpret_hitchhiker_scaling_2025",
+    "urls": [
+      "https://github.com/IBM/ColPret"
+    ]
+  },
+  "contract": {
+    "features": [
+      "total_parameters",
+      "training_tokens"
+    ],
+    "target": "copa_accuracy",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 1366,
+    "test": 342,
+    "total": 1708,
+    "groups": 3
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_name",
+      "num_params",
+      "total_parameters",
+      "Step",
+      "training_tokens",
+      "copa_accuracy",
+      "source_row",
+      "split"
+    ],
+    "test": [
+      "group",
+      "model_name",
+      "num_params",
+      "total_parameters",
+      "Step",
+      "training_tokens",
+      "copa_accuracy",
+      "source_row",
+      "split"
+    ]
+  },
+  "evaluation_subset": true,
+  "active_available": true,
+  "target_description": "Source-reported copa accuracy; larger values represent better performance.",
+  "measurement_provenance": {
+    "method": "direct official ColPret evaluation aggregation; Step converted using four million training tokens per step",
+    "raw_metric_column": "downstream/copa_acc",
+    "perplexity_columns_excluded_as_redundant_transforms": true,
+    "approximate": false
+  }
+}

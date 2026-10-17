@@ -1,0 +1,84 @@
+{
+  "task_id": "multipowerlaw_schedule_loss_scaling",
+  "description": "Predict language-model validation loss under unseen learning-rate schedules and longer training horizons.",
+  "source": {
+    "id": "thu_yao_01_luo_multipowerlaw",
+    "urls": [
+      "https://github.com/thu-yao-01-luo/MultiPowerLaw",
+      "https://arxiv.org/abs/2503.12811"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "current_learning_rate",
+      "cumulative_learning_rate",
+      "cumulative_lr_drop",
+      "recent_lr_drop_h100",
+      "recent_lr_drop_h500",
+      "recent_lr_drop_h2000",
+      "recent_lr_drop_h10000",
+      "schedule_horizon"
+    ],
+    "target": "validation_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 4119,
+    "test": 1032,
+    "total": 5151,
+    "groups": 3
+  },
+  "columns": {
+    "train": [
+      "model_size_label",
+      "parameter_count",
+      "total_parameter_count",
+      "training_step",
+      "training_tokens",
+      "current_learning_rate",
+      "cumulative_learning_rate",
+      "cumulative_lr_drop",
+      "schedule_horizon",
+      "validation_loss",
+      "compute_flops",
+      "schedule_name",
+      "group",
+      "split",
+      "recent_lr_drop_h100",
+      "recent_lr_drop_h500",
+      "recent_lr_drop_h2000",
+      "recent_lr_drop_h10000"
+    ],
+    "test": [
+      "model_size_label",
+      "parameter_count",
+      "total_parameter_count",
+      "training_step",
+      "training_tokens",
+      "current_learning_rate",
+      "cumulative_learning_rate",
+      "cumulative_lr_drop",
+      "schedule_horizon",
+      "validation_loss",
+      "compute_flops",
+      "schedule_name",
+      "group",
+      "split",
+      "recent_lr_drop_h100",
+      "recent_lr_drop_h500",
+      "recent_lr_drop_h2000",
+      "recent_lr_drop_h10000"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Exact public validation loss.",
+  "measurement_provenance": {
+    "method": "exact public experiment result table",
+    "approximate": false,
+    "figure_derived": false
+  }
+}

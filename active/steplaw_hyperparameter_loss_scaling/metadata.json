@@ -1,0 +1,45 @@
+{
+  "task_id": "steplaw_hyperparameter_loss_scaling",
+  "setting": "active",
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "learning_rate",
+      "batch_size"
+    ],
+    "target": "smooth_loss",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "cost_model": {
+    "basis": {
+      "kind": "6ND_proxy",
+      "detail": "6 x `parameter_count` x `training_tokens`",
+      "columns": [
+        "parameter_count",
+        "training_tokens"
+      ]
+    },
+    "unit": "FLOPs",
+    "pool_rows": 1528,
+    "pool_cost": 8.407914511257601e+22,
+    "budget_cap": null
+  },
+  "catalogue_columns": [
+    "obs_id",
+    "parameter_count",
+    "training_tokens",
+    "learning_rate",
+    "batch_size",
+    "cost_flops",
+    "group"
+  ],
+  "measurement_columns": [
+    "obs_id",
+    "target",
+    "cost_flops"
+  ],
+  "test_data": "../../datasets/steplaw_hyperparameter_loss_scaling/test.parquet",
+  "target_description": "Source-reported smooth loss; smaller values represent better performance."
+}

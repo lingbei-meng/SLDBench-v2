@@ -1,0 +1,67 @@
+{
+  "task_id": "hf_loubnabnl_parameter_token_compute_scaling",
+  "description": "Parameter-token Compute Scaling",
+  "source": {
+    "id": "hf_loubnabnl_scaling_laws_params",
+    "urls": [
+      "https://huggingface.co/datasets/loubnabnl/scaling-laws-params"
+    ],
+    "title": "Parameter-token Compute Scaling"
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens"
+    ],
+    "target": "log10_compute",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 93,
+    "test": 23,
+    "total": 116,
+    "groups": 1
+  },
+  "columns": {
+    "train": [
+      "id",
+      "group",
+      "split_unit",
+      "attention_head_type",
+      "hidden_size",
+      "num_gpu",
+      "num_heads",
+      "num_layer",
+      "sequence_length",
+      "target_transform",
+      "training_time",
+      "parameter_count",
+      "training_tokens",
+      "log10_compute",
+      "cost_flops",
+      "source_datapoint_id"
+    ],
+    "test": [
+      "id",
+      "group",
+      "split_unit",
+      "attention_head_type",
+      "hidden_size",
+      "num_gpu",
+      "num_heads",
+      "num_layer",
+      "sequence_length",
+      "target_transform",
+      "training_time",
+      "parameter_count",
+      "training_tokens",
+      "log10_compute",
+      "cost_flops",
+      "source_datapoint_id"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": true,
+  "target_description": "Base-10 logarithm of source-reported compute."
+}

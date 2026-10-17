@@ -1,0 +1,52 @@
+{
+  "task_id": "datadecide_benchmark_scaling",
+  "description": "Predict downstream benchmark accuracy across DataDecide model size, data recipe, and training-compute scales.",
+  "source": {
+    "id": "datadecide",
+    "urls": [
+      "https://huggingface.co/datasets/allenai/DataDecide-eval-results"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count",
+      "training_tokens",
+      "compute_flops",
+      "step"
+    ],
+    "target": "target",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 376200,
+    "test": 94050,
+    "total": 470250,
+    "groups": 1650
+  },
+  "columns": {
+    "train": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "compute_flops",
+      "step",
+      "target"
+    ],
+    "test": [
+      "group",
+      "model_id",
+      "target_name",
+      "parameter_count",
+      "training_tokens",
+      "compute_flops",
+      "step",
+      "target"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "The response is the source-reported benchmark quantity identified by the `group` label; the law predicts one scalar metric within each group. Representative metric labels are arc challenge, arc easy, boolq, csqa, hellaswag, mmlu abstract algebra, and 60 more."
+}

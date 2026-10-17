@@ -1,0 +1,47 @@
+{
+  "task_id": "finetuning_rmsd_parameter_scaling",
+  "description": "Extrapolate fine-tuning scaling-law RMSD to the largest model in each family.",
+  "source": {
+    "id": "lin_et_al_rectified_finetuning_scaling_law",
+    "urls": [
+      "https://github.com/linhaowei1/Fine-tuning-Scaling-Law"
+    ]
+  },
+  "contract": {
+    "features": [
+      "parameter_count"
+    ],
+    "target": "scaling_law_rmsd_log",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 48,
+    "test": 12,
+    "total": 60,
+    "groups": 12
+  },
+  "columns": {
+    "train": [
+      "group",
+      "dataset",
+      "family",
+      "law_type",
+      "parameter_count",
+      "scaling_law_rmsd_log",
+      "split"
+    ],
+    "test": [
+      "group",
+      "dataset",
+      "family",
+      "law_type",
+      "parameter_count",
+      "scaling_law_rmsd_log",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported scalar quantity `scaling_law_rmsd_log` (scaling law rmsd log) predicted for each group."
+}

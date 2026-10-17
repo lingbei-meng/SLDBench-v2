@@ -1,0 +1,65 @@
+{
+  "task_id": "large_scale_transfer_covidx_cxr2_shot_accuracy_scaling",
+  "description": "Extrapolate COVIDx CXR-2 test accuracy to the official 500-shot transfer scale for each released pretraining setup.",
+  "source": {
+    "id": "slampai_large_scale_pretraining_transfer",
+    "urls": [
+      "https://github.com/SLAMPAI/large-scale-pretraining-transfer"
+    ]
+  },
+  "contract": {
+    "features": [
+      "transfer_shots"
+    ],
+    "target": "mean_test_accuracy",
+    "group": "group",
+    "law_signature": "law(input_data: list[dict[str, float]], group: str) -> list[dict[str, float]]"
+  },
+  "splits": {
+    "train": 56,
+    "test": 14,
+    "total": 70,
+    "groups": 14
+  },
+  "columns": {
+    "train": [
+      "group",
+      "dataset",
+      "pretrained_model",
+      "transfer_shots",
+      "mean_test_accuracy",
+      "seed_std",
+      "seed_count",
+      "split"
+    ],
+    "test": [
+      "group",
+      "dataset",
+      "pretrained_model",
+      "transfer_shots",
+      "mean_test_accuracy",
+      "seed_std",
+      "seed_count",
+      "split"
+    ]
+  },
+  "evaluation_subset": false,
+  "active_available": false,
+  "target_description": "Source-reported mean test accuracy; larger values represent better performance.",
+  "measurement_provenance": {
+    "source_table": "results/finetuning_results_covidx_cxr2_test_acc.csv",
+    "method": "exact released metric_value entries; duplicate resume reports removed with the official notebook key and five official seeds averaged",
+    "numeric_scales": [
+      1,
+      5,
+      10,
+      100,
+      500
+    ],
+    "excluded_scale": "full_shot is excluded because it is a dataset-dependent label rather than a shared numeric shot count",
+    "raw_rows": 833,
+    "deduplicated_rows": 420,
+    "seed_aggregation": "arithmetic mean; seed standard deviation retained",
+    "approximate": false
+  }
+}
